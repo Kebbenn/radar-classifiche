@@ -14,7 +14,7 @@
     return String(Math.round(x));
   }
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
-  function colore(v) { return v >= 65 ? 'verde' : (v >= 45 ? 'giallo' : 'rosso'); }
+  function colore(v) { return v >= 60 ? 'verde' : (v >= 40 ? 'giallo' : 'rosso'); }
 
   function mostraCosto() {
     costo.textContent = 'Userà circa ' + n(YT.costoStimato(modo.value)) + ' crediti YouTube su 10.000 al giorno. ' +

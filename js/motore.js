@@ -174,13 +174,13 @@
 
     // ===== VIRALITÀ: l'argomento sta tirando adesso? =====
     var rapportoAB = (mA != null && mB != null && mB > 0) ? mA / mB : null;
-    var vOra = rapportoAB == null ? null : scala(rapportoAB, 0.4, 1.3);
+    var vOra = rapportoAB == null ? null : scala(rapportoAB, 0.4, 1.8);
     var canaliA = {}; Amaturi.filter(function (v) { return v.views >= Math.max(medianaNicchia, 10000); }).forEach(function (v) { canaliA[v.canaleId] = 1; });
     var nCanaliForti = Object.keys(canaliA).length;
-    var vCanali = A.length >= 3 ? scala(nCanaliForti, 0, 20) : null;
+    var vCanali = A.length >= 3 ? scala(nCanaliForti, 0, 35) : null;
     var conIscr = N.filter(function (v) { return v.xIscritti != null; });
     var botto = conIscr.filter(function (v) { return v.xIscritti >= 2; }).length;
-    var vBotto = conIscr.length >= 8 ? scala(botto / conIscr.length, 0.1, 0.6) : null;
+    var vBotto = conIscr.length >= 8 ? scala(botto / conIscr.length, 0.1, 0.85) : null;
     var vv = media([[vOra, 0.4], [vCanali, 0.3], [vBotto, 0.3]]);
     r.viralita = {
       voto: vv == null ? null : tondo(vv),
@@ -194,7 +194,7 @@
     var vp = piccoli.map(function (v) { return v.views; });
     var medPiccoli = piccoli.length ? mediana(vp) : null;
     var piccoliSopra10k = piccoli.filter(function (v) { return v.views >= 10000; }).length;
-    var oPiccoli = (nOk && piccoli.length >= 3) ? scala(piccoliSopra10k / piccoli.length, 0.05, 0.5) : null;
+    var oPiccoli = (nOk && piccoli.length >= 3) ? scala(piccoliSopra10k / piccoli.length, 0.05, 0.75) : null;
     var canaliNuovi = canali.filter(function (c) { return c.nuovo; });
     var nuoviSopra = canaliNuovi.filter(function (c) { return c.video.some(function (v) { return v.views > medianaNicchia; }); }).length;
     var oNuovi = scala(nuoviSopra, 0, 8);
@@ -217,11 +217,11 @@
       var sopra = c.video.filter(function (v) { return v.views > medianaNicchia; }).length;
       return sopra / c.video.length >= 0.5;
     }).length;
-    var rRipete = ripetuti.length >= 2 ? scala(ripetutiOk / ripetuti.length, 0.1, 0.8) : null;
+    var rRipete = ripetuti.length >= 2 ? scala(ripetutiOk / ripetuti.length, 0.1, 0.95) : null;
     var rapportoAC = (mA != null && mC != null && mC > 0) ? mA / mC : null;
     var rRegge = rapportoAC == null ? null : scala(rapportoAC, 0.3, 1.2);
     var sopra100k = N.filter(function (v) { return v.views >= 100000; }).length;
-    var rProb = nOk ? scala(sopra100k / N.length, 0.02, 0.25) : null;
+    var rProb = nOk ? scala(sopra100k / N.length, 0.02, 0.4) : null;
     var rv = media([[rRipete, 0.4], [rRegge, 0.25], [rProb, 0.35]]);
     r.replicabilita = {
       voto: rv == null ? null : tondo(rv),
@@ -308,12 +308,12 @@
     else if (stato === 'cala') { base -= 7; aggiustamenti.push({ motivo: 'il tema sta calando', punti: -7 }); }
     else if (stato === 'cresce' || stato === 'nuovo') { base += 5; aggiustamenti.push({ motivo: 'il tema sta crescendo', punti: 5 }); }
     if (r.senzaLingua.giudizio === 'si') { base += 5; aggiustamenti.push({ motivo: 'funziona in più lingue: si capisce senza parole', punti: 5 }); }
-    if (stato === 'morendo' || stato === 'fermo') { base = Math.min(base, 44); }
+    if (stato === 'morendo' || stato === 'fermo') { base = Math.min(base, 39); }
     if (r.pochiDati) { base = Math.min(base, 55); aggiustamenti.push({ motivo: 'pochi dati: voto limitato a 55', punti: 0 }); }
     r.voto = tondo(limita(base, 0, 100));
     r.aggiustamenti = aggiustamenti;
-    r.giudizio = r.voto >= 65 ? 'Sì, vale la pena' : (r.voto >= 45 ? 'Da provare' : 'Meglio di no');
-    r.tipo = (r.voto >= 65 && (r.replicabilita.voto || 0) >= 60 && r.sicurezza.semaforo !== 'rosso') ? 'sicura' : (r.voto >= 45 ? 'prova' : 'no');
+    r.giudizio = r.voto >= 60 ? 'Sì, vale la pena' : (r.voto >= 40 ? 'Da provare' : 'Meglio di no');
+    r.tipo = (r.voto >= 60 && (r.replicabilita.voto || 0) >= 55 && r.sicurezza.semaforo !== 'rosso') ? 'sicura' : (r.voto >= 40 ? 'prova' : 'no');
     return r;
   }
 
