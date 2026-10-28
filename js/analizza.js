@@ -22,13 +22,15 @@
   }
   modo.addEventListener('change', mostraCosto); mostraCosto();
 
-  var NOMI_TREND = { cresce: 'Sta crescendo', nuovo: 'Argomento nuovo, sta partendo', stabile: 'Stabile', cala: 'Sta calando', morendo: 'Sta morendo', fermo: 'Fermo: quasi nessuno lo fa più' };
+  var NOMI_TREND = { cresce: 'Sta crescendo', nuovo: 'Argomento nuovo, sta partendo', stabile: 'Stabile', cala: 'Sta calando', morendo: 'Sta morendo', fermo: 'Fermo: quasi nessuno lo fa più', nonTrovato: 'non trovato' };
   var NOMI_SEM = { verde: '🟢 Sicuro', giallo: '🟡 Attenzione', rosso: '🔴 Rischioso' };
-  var NOMI_LINGUA = { si: 'Sì, funziona in più lingue', forse: 'Forse (2 lingue)', no: 'Non dimostrato' };
+  var NOMI_LINGUA = { si: 'Sì, funziona in più lingue', forse: 'Forse (2 lingue)', nonControllato: 'Non controllato (per ora cerco solo in inglese)' };
 
+  var NT = '<span class="muto">non trovato</span>';
+  function x(v) { return v == null ? NT : '×' + String(v).replace('.', ','); }
   function blocco(titolo, voto, spiega, voci) {
-    return '<div class="carta-voto"><h3>' + titolo + ' <span style="float:right">' + voto + '</span></h3>' +
-      '<div class="barra"><span style="width:' + voto + '%"></span></div>' +
+    return '<div class="carta-voto"><h3>' + titolo + ' <span style="float:right">' + (voto == null ? '—' : voto) + '</span></h3>' +
+      '<div class="barra"><span style="width:' + (voto || 0) + '%"></span></div>' +
       '<p class="muto piccolo">' + spiega + '</p>' +
       voci.map(function (v) { return '<div class="voce"><span>' + v[0] + '</span><b>' + v[1] + '</b></div>'; }).join('') + '</div>';
   }
@@ -50,31 +52,31 @@
 
     h += '<div class="tre">';
     h += blocco('Viralità', v.voto, 'L\'argomento sta tirando adesso?', [
-      ['Video usciti nelle ultime 4 settimane', v.uscite.ultime4 + ' (prima: ' + v.uscite.prime4 + ')'],
-      ['Video nuovi tra i 20 più visti', v.corrono.nuoviTraTop20 + ' su ' + v.corrono.top],
+      ['Views dei più visti: ultimo mese contro il mese prima', x(v.ora.rapporto)],
+      ['Canali che ci fanno bei numeri nell\'ultimo mese', v.canaliForti.quanti],
       ['Video con più views che iscritti (×2)', v.piccoliBotto.quanti + ' su ' + v.piccoliBotto.su]
     ]);
     h += blocco('Opportunità', o.voto, 'Un canale piccolo come il tuo può farcela?', [
-      ['Canali sotto 10k iscritti: views tipiche', corto(o.piccoli.mediana) + ' (' + o.piccoli.quanti + ' video)'],
+      ['Canali sotto 10k iscritti: views tipiche', o.piccoli.mediana == null ? NT : corto(o.piccoli.mediana) + ' (' + o.piccoli.quanti + ' video)'],
       ['Canali nuovi (meno di 3 mesi) che vanno bene', o.canaliNuovi.sopraMedia + ' su ' + o.canaliNuovi.nuovi],
       ['Quota di views dei 5 canali più grossi', o.spazio.quotaTop5Pct + '%']
     ]);
     h += blocco('Replicabilità', p.voto, 'Funziona di continuo o è stata fortuna?', [
-      ['Canali che lo rifanno e vanno bene', p.ripete.vannoBene + ' su ' + p.ripete.canaliRipetuti],
+      ['Canali che lo rifanno e vanno bene', p.ripete.canaliRipetuti >= 2 ? p.ripete.vannoBene + ' su ' + p.ripete.canaliRipetuti : NT],
       ['Video oltre 10k / 100k / 1 Mln', p.probabilita.sopra10k + ' / ' + p.probabilita.sopra100k + ' / ' + p.probabilita.sopra1M],
-      ['Video recenti contro vecchi (views al giorno)', '×' + String(p.regge.rapporto).replace('.', ',')]
+      ['Ultimo mese contro 5-6 mesi fa' + (p.regge.rapporto == null ? ' (solo Profonda)' : ''), x(p.regge.rapporto)]
     ]);
     h += '</div>';
 
     h += '<div class="riquadro"><h2>Le regole del corso</h2>' +
-      '<div class="voce"><span>Andamento (ultimi 30 giorni contro i 2 mesi prima)</span><b>' + NOMI_TREND[r.trend.stato] + '</b></div>' +
+      '<div class="voce"><span>Andamento (i più visti dell\'ultimo mese contro quelli del mese prima)</span><b>' + NOMI_TREND[r.trend.stato] + '</b></div>' +
       '<div class="voce"><span>Si capisce senza parole? (va forte in più lingue)</span><b>' + NOMI_LINGUA[r.senzaLingua.giudizio] + '</b></div>' +
       '<div class="voce"><span>Sicurezza (risse, sangue, morti, armi…)</span><b>' + NOMI_SEM[r.sicurezza.semaforo] +
         (r.sicurezza.motivi.length ? ' · ' + r.sicurezza.motivi.map(function (m) { return m.motivo; }).join(', ') : '') + '</b></div>' +
       '<div class="voce"><span>Durata che va meglio</span><b>' + (r.durata.migliore || 'non trovato') +
         (r.durata.tipicaDeiMigliori ? ' (i migliori durano circa ' + r.durata.tipicaDeiMigliori + ' s)' : '') + '</b></div>' +
       '<div class="voce"><span>Quanta gente raggiunge (views ultimi 30 giorni)</span><b>' + corto(r.grandezza.viewsUltimi30) + '</b></div>' +
-      '<div class="voce"><span>Commenti ogni 1.000 views</span><b>' + (r.commenti.ogni1000 == null ? '—' : String(r.commenti.ogni1000).replace('.', ',')) + '</b></div>' +
+      '<div class="voce"><span>Commenti ogni 1.000 views</span><b>' + (r.commenti.ogni1000 == null ? NT : String(r.commenti.ogni1000).replace('.', ',')) + '</b></div>' +
       '</div>';
 
     if (r.modelli.length) {

@@ -27,19 +27,16 @@
   }
 
   // Le ricerche da fare per un argomento. Ogni ricerca costa 100 crediti.
+  // Prendono i più visti di ogni periodo, così il confronto tra "adesso" e "prima" è alla pari.
+  var PERIODI = { A: [0, 30], B: [30, 60], C: [150, 180] };
   function ricerche(argomento, modo) {
     var a = argomento.trim();
-    var base = [
-      { q: a + ' ranking', order: 'viewCount' },
-      { q: a + ' ranked', order: 'date' }
-    ];
-    if (modo === 'profonda') base = base.concat([
-      { q: a + ' ranking', order: 'date' },
-      { q: a + ' tier list', order: 'viewCount' },
-      { q: a + ' top 10', order: 'viewCount' },
-      { q: a + ' rank', order: 'relevance' }
+    var lista = [{ q: a + ' ranking', p: 'A' }, { q: a + ' ranking', p: 'B' }];
+    if (modo === 'profonda') lista = lista.concat([
+      { q: a + ' ranking', p: 'C' },
+      { q: a + ' ranked', p: 'A' }, { q: a + ' ranked', p: 'B' }, { q: a + ' ranked', p: 'C' }
     ]);
-    return base;
+    return lista;
   }
   function costoStimato(modo) {
     var n = ricerche('x', modo).length;
@@ -53,14 +50,16 @@
     var M = root.Motore;
     var cont = new Contatore();
     avanza = avanza || function () {};
-    var dopo = new Date(Date.now() - 180 * 86400000).toISOString();
+    var ora = Date.now();
+    function giorniFa(g) { return new Date(ora - g * 86400000).toISOString(); }
     var lista = ricerche(argomento, modo);
     var ids = {};
     var fatte = 0;
 
     return Promise.all(lista.map(function (r) {
       return chiama('search', { part: 'snippet', type: 'video', videoDuration: 'short', maxResults: 50,
-        q: r.q, order: r.order, publishedAfter: dopo }, chiave, cont, 100)
+        q: r.q, order: 'viewCount',
+        publishedAfter: giorniFa(PERIODI[r.p][1]), publishedBefore: giorniFa(PERIODI[r.p][0]) }, chiave, cont, 100)
         .then(function (j) {
           (j.items || []).forEach(function (it) { if (it.id && it.id.videoId) ids[it.id.videoId] = 1; });
           fatte++; avanza('Ricerche fatte: ' + fatte + ' di ' + lista.length);
