@@ -37,3 +37,33 @@ input[type=password],input[type=text],input[type=search],select{font:inherit;bac
 .aiuto{margin-top:10px}
 .aiuto ol{margin:8px 0 0;padding-left:20px}
 .piede{color:var(--muto);font-size:.85rem;padding:20px 18px 40px}
+
+/* ---- Pezzo 2: Analizza ---- */
+.riga-form { display: flex; gap: 10px; flex-wrap: wrap; }
+.riga-form input { flex: 1 1 260px; }
+.riga-form select { flex: 0 0 auto; }
+.riga-form input, .riga-form select {
+  background: var(--carta2); color: inherit; border: 1px solid var(--linea);
+  border-radius: 10px; padding: 12px 14px; font: inherit;
+}
+.piccolo { font-size: .9em; }
+.voto-grande { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.cerchio { width: 120px; height: 120px; border-radius: 50%; display: grid; place-items: center;
+  font-size: 2.4em; font-weight: 800; border: 8px solid var(--accento); }
+.cerchio.verde { border-color: #34c77b; } .cerchio.giallo { border-color: #ffb547; } .cerchio.rosso { border-color: #ff5d5d; }
+.etichetta { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: .85em; font-weight: 700; margin-right: 6px; }
+.etichetta.sicura { background: #1f4d36; color: #7dffb5; } .etichetta.prova { background: #4d3a12; color: #ffd27d; }
+.etichetta.no { background: #4d1f1f; color: #ff9d9d; }
+.tre { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.barra { height: 8px; background: var(--linea); border-radius: 99px; overflow: hidden; margin: 6px 0 10px; }
+.barra > span { display: block; height: 100%; background: linear-gradient(90deg, var(--accento), var(--accento2)); }
+.voce { display: flex; justify-content: space-between; gap: 10px; padding: 6px 0; border-bottom: 1px dashed var(--linea); }
+.voce:last-child { border-bottom: 0; }
+.modelli { list-style: none; padding: 0; margin: 0; }
+.modelli li { display: flex; gap: 12px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--linea); }
+.modelli img { width: 96px; height: 54px; object-fit: cover; border-radius: 6px; flex: 0 0 auto; }
+.modelli a { color: inherit; }
+.carta-voto { background: var(--carta); border: 1px solid var(--linea); border-radius: var(--raggio); padding: 18px; }
+.carta-voto h3 { margin: 0; }
+.voce b { white-space: nowrap; text-align: right; }
+.voce span { min-width: 0; }

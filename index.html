@@ -51,8 +51,18 @@
   <section class="pagina attiva" id="pagina-analizza">
     <div class="riquadro">
       <h2>Analizza un argomento</h2>
-      <p class="muto">In arrivo nel prossimo pezzo: qui scriverai un argomento (es. "volcano", "snake") e il sito ti dirà se vale la pena e come fare il video.</p>
+      <form id="an-form" class="riga-form">
+        <input id="an-argomento" type="text" placeholder="Scrivi un argomento in inglese, es. volcano, snake, golf" autocomplete="off" required>
+        <select id="an-modo" aria-label="Tipo di ricerca">
+          <option value="veloce">Veloce</option>
+          <option value="profonda">Profonda</option>
+        </select>
+        <button class="bottone" id="an-vai" type="submit">Analizza</button>
+      </form>
+      <p class="muto piccolo" id="an-costo"></p>
+      <p class="esito" id="an-stato"></p>
     </div>
+    <div id="an-risultato"></div>
   </section>
 
   <section class="pagina" id="pagina-robot">
@@ -81,5 +91,8 @@
 </footer>
 
 <script src="js/app.js"></script>
+<script src="js/motore.js"></script>
+<script src="js/youtube.js"></script>
+<script src="js/analizza.js"></script>
 </body>
 </html>
