@@ -73,8 +73,7 @@
       '<div class="voce"><span>Si capisce senza parole? (va forte in più lingue)</span><b>' + NOMI_LINGUA[r.senzaLingua.giudizio] + '</b></div>' +
       '<div class="voce"><span>Sicurezza (risse, sangue, morti, armi…)</span><b>' + NOMI_SEM[r.sicurezza.semaforo] +
         (r.sicurezza.motivi.length ? ' · ' + r.sicurezza.motivi.map(function (m) { return m.motivo; }).join(', ') : '') + '</b></div>' +
-      '<div class="voce"><span>Durata che va meglio</span><b>' + (r.durata.migliore || 'non trovato') +
-        (r.durata.tipicaDeiMigliori ? ' (i migliori durano circa ' + r.durata.tipicaDeiMigliori + ' s)' : '') + '</b></div>' +
+      '<div class="voce"><span>Durata che va meglio</span><b>' + (r.durata.tipicaDeiMigliori && r.shorts >= 10 ? 'circa ' + r.durata.tipicaDeiMigliori + ' secondi (quanto durano i video che vanno meglio)' : NT) + '</b></div>' +
       '<div class="voce"><span>Views tipiche di un video normale (usciti da 5-30 giorni)</span><b>' + (r.normali.mediana == null ? NT : corto(r.normali.mediana)) + '</b></div>' +
       '<div class="voce"><span>Quanta gente raggiunge (views ultimi 30 giorni)</span><b>' + corto(r.grandezza.viewsUltimi30) + '</b></div>' +
       '<div class="voce"><span>Commenti ogni 1.000 views</span><b>' + (r.commenti.ogni1000 == null ? NT : String(r.commenti.ogni1000).replace('.', ',')) + '</b></div>' +
