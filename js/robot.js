@@ -33,7 +33,7 @@
     }).join('') + '</ul>';
     dettagli += '<p><button class="bottone piccolo-b" data-analizza="' + esc(x.argomento) + '">Analizza a fondo (Profonda)</button></p>';
     return '<details class="rb-riga"><summary><span class="pallino ' + colore(x.voto) + '">' + x.voto + '</span><span class="nome-s"><b>' + esc(x.argomento) + '</b> ' + tipo +
-      '<br><span class="muto piccolo">' + esc(x.giudizio) + ' · ' + (TREND[x.andamento] || '—') + (x.canaliNellaScoperta ? ' · trovato su ' + x.canaliNellaScoperta + ' canali negli ultimi 3 giorni' : '') + '</span></span></summary>' +
+      '<br><span class="muto piccolo">' + esc(x.giudizio) + ' · ' + (TREND[x.andamento] || '—') + (x.canaliNellaScoperta ? ' · trovato su ' + x.canaliNellaScoperta + ' canali negli ultimi 3 giorni' : '') + (x.ricerca === 'profonda' ? ' · analisi Profonda' : '') + '</span></span></summary>' +
       '<div class="rb-dettagli">' + dettagli + '</div></details>';
   }
 

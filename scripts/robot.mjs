@@ -12,8 +12,9 @@ const require = createRequire(import.meta.url);
 const QUI = path.dirname(fileURLToPath(import.meta.url));
 const RADICE = path.join(QUI, '..');
 const CHIAVE = process.env.YOUTUBE_API_KEY;
-const TETTO = +(process.env.TETTO_CREDITI || 6500);   // il robot non supera mai questi crediti
-const QUANTI_TEMI = +(process.env.QUANTI_TEMI || 12);
+const TETTO = +(process.env.TETTO_CREDITI || 9500);   // il robot non supera mai questi crediti
+const QUANTI_TEMI = +(process.env.QUANTI_TEMI || 16);
+const PROFONDE = +(process.env.PROFONDE || 3);          // i migliori li rianalizza con la ricerca Profonda
 const PROVA = process.env.ROBOT_PROVA === '1';          // usa un finto YouTube (per provarlo senza chiave)
 
 if (!CHIAVE && !PROVA) { console.error('Manca il segreto YOUTUBE_API_KEY nelle impostazioni del repository.'); process.exit(1); }
@@ -50,8 +51,8 @@ const CATEGORIE = [null, '15', '17', '23', '24', '22', '28', '2', '26', '20']; /
 async function scopri() {
   const ids = new Set();
   for (const cat of CATEGORIE) {
-    for (const q of ['ranking', 'ranked']) {
-      if (q === 'ranked' && cat) continue; // "ranked" solo senza categoria, per risparmiare
+    for (const q of ['ranking', 'ranked', 'tier list', 'top 10']) {
+      if (q !== 'ranking' && cat) continue; // le altre parole solo senza categoria, per risparmiare
       const par = { part: 'snippet', type: 'video', videoDuration: 'short', maxResults: 50, q, order: 'viewCount', publishedAfter: giorniFa(3) };
       if (cat) par.videoCategoryId = cat;
       try { const j = await chiama('search', par, 100); (j.items || []).forEach(it => it.id?.videoId && ids.add(it.id.videoId)); }
@@ -131,16 +132,16 @@ function riassunto(arg, rec, extra) {
     paroleForti: (r.parole || []).slice(0, 5).map(p => p.parola),
     aggiustamenti: r.aggiustamenti, avvisi: r.avvisi,
     modelli: (r.modelli || []).slice(0, 5).map(m => ({ ...m, link: 'https://www.youtube.com/shorts/' + m.id })),
-    creditiUsati: rec.crediti
+    creditiUsati: rec.crediti, ricerca: rec.modo || 'veloce'
   };
 }
-async function analizza(arg) {
-  const costo = YT.costoStimato('veloce');
+async function analizza(arg, modo = 'veloce') {
+  const costo = YT.costoStimato(modo);
   if (crediti + costo > TETTO) throw Object.assign(new Error('tetto crediti raggiunto'), { tetto: true });
-  const d = await YT.raccogli(arg, 'veloce', CHIAVE || 'FINTA');
+  const d = await YT.raccogli(arg, modo, CHIAVE || 'FINTA');
   crediti += d.crediti;
   const lista = Motore.prepara(d.video, d.canali, ora);
-  return { r: Motore.analizza(lista, { argomento: arg, ora }), crediti: d.crediti };
+  return { r: Motore.analizza(lista, { argomento: arg, ora }), crediti: d.crediti, modo };
 }
 
 // ---------- via ----------
@@ -159,6 +160,15 @@ try {
   for (const t of temi) {
     try { risultato.scoperte.push(riassunto(t.argomento, await analizza(t.argomento), { fonte: 'scoperta', canaliNellaScoperta: t.canali, esempiScoperta: t.esempi })); }
     catch (e) { if (e.tetto || e.motivo === 'quotaExceeded') throw e; errori.push(t.argomento + ': ' + e.message); }
+  }
+  // i migliori: di nuovo con la ricerca Profonda (guarda anche 5-6 mesi fa e più video normali)
+  risultato.scoperte.sort((a, b) => b.voto - a.voto);
+  for (const x of risultato.scoperte.slice(0, PROFONDE)) {
+    if (crediti + YT.costoStimato('profonda') > TETTO) break;
+    try {
+      const piu = riassunto(x.argomento, await analizza(x.argomento, 'profonda'), { fonte: 'scoperta', canaliNellaScoperta: x.canaliNellaScoperta, esempiScoperta: x.esempiScoperta, votoVeloce: x.voto });
+      risultato.scoperte[risultato.scoperte.indexOf(x)] = piu;
+    } catch (e) { if (e.tetto || e.motivo === 'quotaExceeded') throw e; errori.push(x.argomento + ' (profonda): ' + e.message); }
   }
 } catch (e) {
   errori.push(e.tetto ? 'Mi sono fermato: raggiunto il tetto di ' + TETTO + ' crediti.' :

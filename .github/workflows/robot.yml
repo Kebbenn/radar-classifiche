@@ -24,7 +24,7 @@ jobs:
       - name: Cerca e analizza
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
-          TETTO_CREDITI: '6500'
+          TETTO_CREDITI: '9500'
         run: node scripts/robot.mjs
       - name: Salva i risultati
         if: always()
