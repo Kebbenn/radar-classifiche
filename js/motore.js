@@ -87,7 +87,7 @@
     { nome: 'morti', re: /\b(dead body|death|died|dies|killed|fatal|morte|muerte)\b/i },
     { nome: 'bambini in pericolo', re: /\b(kid|kids|child|baby|babies|toddler)\b.*\b(danger|almost|fall|nearly|accident)\b/i },
     { nome: 'contenuti per adulti', re: /\b(sexy|hot girl|bikini|nsfw|18\+|onlyfans|twerk)\b/i },
-    { nome: 'armi', re: /\b(gun|guns|shooting|shot dead|weapon)\b/i }
+    { nome: 'armi', re: /\b(?<!(staple|nail|glue|water|nerf|toy|heat|spray|paint|massage|bubble|airsoft|glitter) )(gun|guns)\b|\b(shooting|shot dead|weapon|weapons)\b/i }
   ];
   function rischiDi(titolo) {
     return RISCHI.filter(function (r) { return r.re.test(titolo || ''); }).map(function (r) { return r.nome; });
@@ -266,7 +266,7 @@
     conRischio.forEach(function (v) { v.rischi.forEach(function (x) { conteggio[x] = (conteggio[x] || 0) + 1; }); });
     var quotaRischio = conRischio.length / n;
     r.sicurezza = {
-      semaforo: quotaRischio >= 0.25 ? 'rosso' : (quotaRischio >= 0.08 ? 'giallo' : 'verde'),
+      semaforo: (quotaRischio >= 0.25 && conRischio.length >= 3) ? 'rosso' : ((quotaRischio >= 0.08 && conRischio.length >= 2) ? 'giallo' : 'verde'),
       quotaPct: tondo(quotaRischio * 100),
       motivi: Object.keys(conteggio).sort(function (a, b) { return conteggio[b] - conteggio[a]; }).map(function (x) { return { motivo: x, shorts: conteggio[x] }; })
     };
