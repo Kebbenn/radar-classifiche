@@ -48,10 +48,10 @@
   function comeFarlo(arg, r) {
     var A = arg.charAt(0).toUpperCase() + arg.slice(1);
     var punti = [];
-    var tipo = r.tipo === 'sicura' ? 'È un\'<b>idea sicura</b>: contala tra le 3 idee già provate del metodo 3-2.'
-      : r.tipo === 'prova' ? 'È un\'<b>idea da provare</b>: contala tra le 2 prove nuove del metodo 3-2.'
+    var tipo = r.tipo === 'sicura' ? 'È un\'<b>idea sicura</b>: contala tra le 2 idee già provate del metodo 3-2.'
+      : r.tipo === 'prova' ? 'È un\'<b>idea da provare</b>: contala tra le 3 prove nuove del metodo 3-2.'
       : 'Il voto è basso: <b>meglio non farla</b>, o cercare un argomento più largo.';
-    punti.push(['Che tipo di idea è', tipo + ' (su 5 video: 3 idee già provate, 2 prove nuove)', 'regola 6']);
+    punti.push(['Che tipo di idea è', tipo + ' (su 5 video: 2 idee già provate, 3 prove nuove, come dice il corso per chi fa già views)', 'regola 6']);
     var parole = (r.parole || []).slice(0, 4).map(function (p) { return '"' + esc(p.parola) + '"'; });
     punti.push(['Titolo', 'Forma semplice: <b>Ranking the Best ' + esc(A) + ' Moments</b>' +
       (parole.length ? '. Nei titoli che vanno meglio tornano spesso: ' + parole.join(', ') + '. Prendi spunto da lì.' : '.') +
