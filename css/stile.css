@@ -88,3 +88,10 @@ input[type=password],input[type=text],input[type=search],select{font:inherit;bac
 .pallino.verde { border-color: #34c77b; } .pallino.giallo { border-color: #ffb547; } .pallino.rosso { border-color: #ff5d5d; }
 .piccolo-b { padding: 6px 12px; font-size: .9em; }
 details.riquadro > summary { cursor: pointer; }
+
+/* ---- Pezzo 4: robot ---- */
+.rb-riga { border-bottom: 1px solid var(--linea); padding: 8px 0; }
+.rb-riga > summary { display: flex; align-items: center; gap: 12px; cursor: pointer; list-style: none; }
+.rb-riga > summary::-webkit-details-marker { display: none; }
+.rb-dettagli { padding: 10px 0 4px 50px; }
+@media (max-width: 600px) { .rb-dettagli { padding-left: 0; } }

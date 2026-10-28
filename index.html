@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Radar Classifiche</title>
 <meta name="description" content="Capire se un argomento di classifiche per YouTube Shorts vale la pena, con le regole del corso.">
-<link rel="stylesheet" href="css/stile.css?v=9">
+<link rel="stylesheet" href="css/stile.css?v=10">
 </head>
 <body>
 <header class="testata">
@@ -72,8 +72,14 @@
   <section class="pagina" id="pagina-robot">
     <div class="riquadro">
       <h2>Le ricerche del robot</h2>
-      <p class="muto">In arrivo: ogni mattina alle 6:17 il robot cercherà da solo i temi che stanno salendo. Qui vedrai le sue classifiche, giorno per giorno.</p>
+      <p class="muto piccolo">Ogni mattina verso le 6:17 il robot cerca da solo le classifiche che vanno forte negli ultimi 3 giorni, ne ricava gli argomenti e li analizza con le stesse regole di "Analizza". Analizza anche gli argomenti che segui. Non usa i crediti di questo browser.</p>
+      <div class="riga-form" style="align-items:center">
+        <label for="rb-giorno" class="muto piccolo">Giorno:</label>
+        <select id="rb-giorno"></select>
+      </div>
+      <p class="esito" id="rb-stato">Carico…</p>
     </div>
+    <div id="rb-risultato"></div>
   </section>
 
   <section class="pagina" id="pagina-guida">
@@ -94,10 +100,11 @@
   <p>Radar Classifiche usa i servizi API di YouTube. Non è collegato a YouTube né a Google.</p>
 </footer>
 
-<script src="js/app.js?v=9"></script>
-<script src="js/motore.js?v=9"></script>
-<script src="js/youtube.js?v=9"></script>
-<script src="js/extra.js?v=9"></script>
-<script src="js/analizza.js?v=9"></script>
+<script src="js/app.js?v=10"></script>
+<script src="js/motore.js?v=10"></script>
+<script src="js/youtube.js?v=10"></script>
+<script src="js/extra.js?v=10"></script>
+<script src="js/robot.js?v=10"></script>
+<script src="js/analizza.js?v=10"></script>
 </body>
 </html>

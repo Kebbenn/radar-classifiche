@@ -1,0 +1,38 @@
+name: Robot del mattino
+
+on:
+  schedule:
+    - cron: '17 5 * * *'   # 5:17 UTC = 6:17 in Italia d'inverno (7:17 d'estate)
+  workflow_dispatch:        # per farlo partire a mano dal pulsante "Run workflow"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: robot
+  cancel-in-progress: false
+
+jobs:
+  robot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Cerca e analizza
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          TETTO_CREDITI: '6500'
+        run: node scripts/robot.mjs
+      - name: Salva i risultati
+        if: always()
+        run: |
+          git config user.name "robot-radar"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/robot
+          if git diff --cached --quiet; then echo "Niente da salvare"; exit 0; fi
+          git commit -m "Robot: ricerche del $(TZ=Europe/Rome date +%Y-%m-%d)"
+          git pull --rebase -q origin main
+          git push
