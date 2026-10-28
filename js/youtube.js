@@ -28,13 +28,19 @@
 
   // Le ricerche da fare per un argomento. Ogni ricerca costa 100 crediti.
   // Prendono i più visti di ogni periodo, così il confronto tra "adesso" e "prima" è alla pari.
-  var PERIODI = { A: [0, 30], B: [30, 60], C: [150, 180] };
+  var PERIODI = { A: [0, 30], An: [5, 30], B: [30, 60], C: [150, 180] };
+  // tipo 'top' = i più visti del periodo (per capire se cresce o cala)
+  // tipo 'normali' = gli ultimi usciti, andati bene o male (per capire le possibilità vere)
   function ricerche(argomento, modo) {
     var a = argomento.trim();
-    var lista = [{ q: a + ' ranking', p: 'A' }, { q: a + ' ranking', p: 'B' }];
+    var lista = [
+      { q: a + ' ranking', p: 'A', tipo: 'top' }, { q: a + ' ranking', p: 'B', tipo: 'top' },
+      { q: a + ' ranking', p: 'An', tipo: 'normali' }
+    ];
     if (modo === 'profonda') lista = lista.concat([
-      { q: a + ' ranking', p: 'C' },
-      { q: a + ' ranked', p: 'A' }, { q: a + ' ranked', p: 'B' }, { q: a + ' ranked', p: 'C' }
+      { q: a + ' ranking', p: 'C', tipo: 'top' },
+      { q: a + ' ranking', p: 'B', tipo: 'normali' },
+      { q: a + ' ranked', p: 'An', tipo: 'normali' }
     ]);
     return lista;
   }
@@ -58,10 +64,10 @@
 
     return Promise.all(lista.map(function (r) {
       return chiama('search', { part: 'snippet', type: 'video', videoDuration: 'short', maxResults: 50,
-        q: r.q, order: 'viewCount',
+        q: r.q, order: r.tipo === 'top' ? 'viewCount' : 'date',
         publishedAfter: giorniFa(PERIODI[r.p][1]), publishedBefore: giorniFa(PERIODI[r.p][0]) }, chiave, cont, 100)
         .then(function (j) {
-          (j.items || []).forEach(function (it) { if (it.id && it.id.videoId) ids[it.id.videoId] = 1; });
+          (j.items || []).forEach(function (it) { if (it.id && it.id.videoId) { var g = ids[it.id.videoId] || (ids[it.id.videoId] = {}); g[r.tipo] = true; } });
           fatte++; avanza('Ricerche fatte: ' + fatte + ' di ' + lista.length);
         });
     })).then(function () {
@@ -89,6 +95,7 @@
             views: +st.viewCount || 0, likes: st.likeCount != null ? +st.likeCount : null,
             commenti: st.commentCount != null ? +st.commentCount : null,
             durata: dur, lingua: s.defaultAudioLanguage || s.defaultLanguage || '',
+            top: !!(ids[it.id] && ids[it.id].top), normale: !!(ids[it.id] && ids[it.id].normali),
             miniatura: s.thumbnails && (s.thumbnails.medium || s.thumbnails.default || {}).url
           });
         });

@@ -18,7 +18,7 @@
 
   function mostraCosto() {
     costo.textContent = 'Userà circa ' + n(YT.costoStimato(modo.value)) + ' crediti YouTube su 10.000 al giorno. ' +
-      (modo.value === 'veloce' ? 'Veloce: 2 ricerche.' : 'Profonda: 6 ricerche, più video e dati più sicuri.');
+      (modo.value === 'veloce' ? 'Veloce: 3 ricerche.' : 'Profonda: 6 ricerche, più video e dati più sicuri.');
   }
   modo.addEventListener('change', mostraCosto); mostraCosto();
 
@@ -54,16 +54,16 @@
     h += blocco('Viralità', v.voto, 'L\'argomento sta tirando adesso?', [
       ['Views dei più visti: ultimo mese contro il mese prima', x(v.ora.rapporto)],
       ['Canali che ci fanno bei numeri nell\'ultimo mese', v.canaliForti.quanti],
-      ['Video con più views che iscritti (×2)', v.piccoliBotto.quanti + ' su ' + v.piccoliBotto.su]
+      ['Video normali con più views che iscritti (×2)', v.piccoliBotto.su >= 8 ? v.piccoliBotto.quanti + ' su ' + v.piccoliBotto.su : NT]
     ]);
     h += blocco('Opportunità', o.voto, 'Un canale piccolo come il tuo può farcela?', [
-      ['Canali sotto 10k iscritti: views tipiche', o.piccoli.mediana == null ? NT : corto(o.piccoli.mediana) + ' (' + o.piccoli.quanti + ' video)'],
+      ['Video normali di canali sotto 10k iscritti che superano 10k views', o.piccoli.quanti >= 3 ? o.piccoli.sopra10k + ' su ' + o.piccoli.quanti + ' (tipico: ' + corto(o.piccoli.mediana) + ')' : NT],
       ['Canali nuovi (meno di 3 mesi) che vanno bene', o.canaliNuovi.sopraMedia + ' su ' + o.canaliNuovi.nuovi],
       ['Quota di views dei 5 canali più grossi', o.spazio.quotaTop5Pct + '%']
     ]);
     h += blocco('Replicabilità', p.voto, 'Funziona di continuo o è stata fortuna?', [
       ['Canali che lo rifanno e vanno bene', p.ripete.canaliRipetuti >= 2 ? p.ripete.vannoBene + ' su ' + p.ripete.canaliRipetuti : NT],
-      ['Video oltre 10k / 100k / 1 Mln', p.probabilita.sopra10k + ' / ' + p.probabilita.sopra100k + ' / ' + p.probabilita.sopra1M],
+      ['Video normali oltre 10k / 100k / 1 Mln', p.probabilita.su >= 8 ? p.probabilita.sopra10k + ' / ' + p.probabilita.sopra100k + ' / ' + p.probabilita.sopra1M + ' (su ' + p.probabilita.su + ')' : NT],
       ['Ultimo mese contro 5-6 mesi fa' + (p.regge.rapporto == null ? ' (solo Profonda)' : ''), x(p.regge.rapporto)]
     ]);
     h += '</div>';
@@ -75,6 +75,7 @@
         (r.sicurezza.motivi.length ? ' · ' + r.sicurezza.motivi.map(function (m) { return m.motivo; }).join(', ') : '') + '</b></div>' +
       '<div class="voce"><span>Durata che va meglio</span><b>' + (r.durata.migliore || 'non trovato') +
         (r.durata.tipicaDeiMigliori ? ' (i migliori durano circa ' + r.durata.tipicaDeiMigliori + ' s)' : '') + '</b></div>' +
+      '<div class="voce"><span>Views tipiche di un video normale (usciti da 5-30 giorni)</span><b>' + (r.normali.mediana == null ? NT : corto(r.normali.mediana)) + '</b></div>' +
       '<div class="voce"><span>Quanta gente raggiunge (views ultimi 30 giorni)</span><b>' + corto(r.grandezza.viewsUltimi30) + '</b></div>' +
       '<div class="voce"><span>Commenti ogni 1.000 views</span><b>' + (r.commenti.ogni1000 == null ? NT : String(r.commenti.ogni1000).replace('.', ',')) + '</b></div>' +
       '</div>';
