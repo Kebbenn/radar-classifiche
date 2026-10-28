@@ -74,11 +74,11 @@
       var tutti = Object.keys(ids);
       avanza('Leggo i numeri di ' + tutti.length + ' video…');
       return Promise.all(aPezzi(tutti, 50).map(function (p) {
-        return chiama('videos', { part: 'snippet,statistics,contentDetails', id: p.join(','), maxResults: 50 }, chiave, cont, 1);
+        return chiama('videos', { part: 'snippet,statistics,contentDetails,player', id: p.join(','), maxHeight: 640 }, chiave, cont, 1);
       }));
     }).then(function (risposte) {
       var video = [];
-      var scartati = { lunghi: 0, nonClassifica: 0, altroArgomento: 0 };
+      var scartati = { lunghi: 0, orizzontali: 0, nonClassifica: 0, altroArgomento: 0 };
       var rad = M.radici(argomento);
       risposte.forEach(function (j) {
         (j.items || []).forEach(function (it) {
@@ -86,6 +86,8 @@
           var dur = M.durataSecondi(it.contentDetails && it.contentDetails.duration);
           var testo = (s.title || '') + ' ' + (s.description || '') + ' ' + (s.tags || []).join(' ');
           if (dur == null || dur > 180) { scartati.lunghi++; return; }
+          var pl = it.player || {};
+          if (pl.embedWidth && pl.embedHeight && +pl.embedWidth > +pl.embedHeight) { scartati.orizzontali++; return; } // non è uno Short: è orizzontale
           var hashtag = ((s.description || '').match(/#[\p{L}\p{N}_]+/gu) || []).join(' ');
           if (!M.eClassifica(s.title) && !/#(rank|ranking|ranked|tierlist|top10|top5)\b/i.test(hashtag)) { scartati.nonClassifica++; return; }
           if (!M.parlaDi(testo, rad)) { scartati.altroArgomento++; return; }

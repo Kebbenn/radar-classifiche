@@ -106,7 +106,7 @@
         var lista = Motore.prepara(dati.video, dati.canali);
         var r = Motore.analizza(lista);
         stato.className = 'esito ok';
-        stato.textContent = 'Fatto. Video trovati: ' + dati.trovati + ', tenuti come classifiche su "' + arg + '": ' + lista.length + '.';
+        stato.textContent = 'Fatto. Video trovati: ' + dati.trovati + ', tenuti come classifiche su "' + arg + '": ' + lista.length + '. Scartati: ' + dati.scartati.orizzontali + ' orizzontali (non Shorts), ' + dati.scartati.lunghi + ' troppo lunghi, ' + dati.scartati.nonClassifica + ' non classifiche, ' + dati.scartati.altroArgomento + ' su altro argomento.';
         disegna(arg, r, dati);
         window.RC.ultima = { argomento: arg, modo: modo.value, quando: new Date().toISOString(), risultato: r, video: lista, crediti: dati.crediti };
       })
