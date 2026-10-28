@@ -95,3 +95,8 @@ details.riquadro > summary { cursor: pointer; }
 .rb-riga > summary::-webkit-details-marker { display: none; }
 .rb-dettagli { padding: 10px 0 4px 50px; }
 @media (max-width: 600px) { .rb-dettagli { padding-left: 0; } }
+.tabella-fonti { width: 100%; border-collapse: collapse; margin-top: 10px; }
+.tabella-fonti th, .tabella-fonti td { text-align: left; vertical-align: top; padding: 10px 8px; border-bottom: 1px solid var(--linea); }
+.tabella-fonti th { color: var(--muto); font-weight: 600; }
+.tabella-fonti td:first-child { width: 45%; }
+.tabella-fonti .etichetta { margin: 2px 4px 2px 0; }
