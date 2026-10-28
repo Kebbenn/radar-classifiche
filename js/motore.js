@@ -298,7 +298,20 @@
       .sort(function (a, b) { return b.xCanale - a.xCanale; }).slice(0, 8)
       .map(function (v) { return { id: v.id, titolo: v.titolo, canale: v.canale, iscritti: v.iscritti, views: v.views, vpd: tondo(v.vpd), xCanale: Math.round(v.xCanale * 10) / 10, durata: v.durata }; });
 
-    // ===== VOTO FINALE =====
+    // Views tipiche di un video normale secondo la grandezza del canale
+    var bande = [
+      { nome: 'sotto 1.000 iscritti', da: 0, a: 1000 }, { nome: '1.000 - 10.000', da: 1000, a: 10000 },
+      { nome: '10.000 - 100.000', da: 10000, a: 100000 }, { nome: 'oltre 100.000', da: 100000, a: Infinity }
+    ];
+    r.perGrandezza = bande.map(function (b) {
+      var d = N.filter(function (v) { return v.iscritti >= b.da && v.iscritti < b.a; });
+      return { nome: b.nome, shorts: d.length, mediana: d.length >= 3 ? tondo(mediana(d.map(function (v) { return v.views; }))) : null };
+    });
+
+    // Parole che tornano nei titoli dei video migliori (per le idee figlie)
+    r.parole = paroleForti(lista, opzioni.argomento || '');
+
+
     var base = media([[r.viralita.voto, 0.35], [r.opportunita.voto, 0.3], [r.replicabilita.voto, 0.35]]);
     if (base == null) base = 0;
     var aggiustamenti = [];
@@ -315,6 +328,29 @@
     r.giudizio = r.voto >= 60 ? 'Sì, vale la pena' : (r.voto >= 40 ? 'Da provare' : 'Meglio di no');
     r.tipo = (r.voto >= 60 && (r.replicabilita.voto || 0) >= 55 && r.sicurezza.semaforo !== 'rosso') ? 'sicura' : (r.voto >= 40 ? 'prova' : 'no');
     return r;
+  }
+
+  var VUOTE = ('the a an of in on at to for and or with from by is are be this that these those my your his her their it its ' +
+    'best worst most top rank ranks ranked ranking rankings tier list moments moment part shorts short viral funny fyp foryou ' +
+    'foryoupage trending video videos new random things thing what who when ever all time vs you me we i so very ' +
+    'mejores peores momentos para como melhores piores momenti migliori peggiori meilleurs moments besten momente').split(' ');
+  function paroleForti(lista, argomento) {
+    var rad = radici(argomento);
+    var soglia = percentile(lista.map(function (v) { return v.views; }), 0.75);
+    var conta = {};
+    lista.filter(function (v) { return v.views >= soglia; }).forEach(function (v) {
+      var visti = {};
+      (v.titolo || '').toLowerCase().replace(/#[^\s]+/g, ' ').split(/[^\p{L}]+/u).forEach(function (w) {
+        if (w.length < 4 || VUOTE.indexOf(w) >= 0 || visti[w]) return;
+        if (rad.some(function (r) { return w.indexOf(r) === 0 || r.indexOf(w) === 0; })) return;
+        visti[w] = 1;
+        if (!conta[w]) conta[w] = { parola: w, video: 0, canali: {} };
+        conta[w].video++; conta[w].canali[v.canaleId] = 1;
+      });
+    });
+    return Object.keys(conta).map(function (k) { var c = conta[k]; return { parola: c.parola, video: c.video, canali: Object.keys(c.canali).length }; })
+      .filter(function (c) { return c.canali >= 2; })
+      .sort(function (a, b) { return b.canali - a.canali || b.video - a.video; }).slice(0, 8);
   }
 
   var Motore = {

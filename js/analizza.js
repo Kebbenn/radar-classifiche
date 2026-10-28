@@ -35,7 +35,8 @@
       voci.map(function (v) { return '<div class="voce"><span>' + v[0] + '</span><b>' + v[1] + '</b></div>'; }).join('') + '</div>';
   }
 
-  function disegna(arg, r, dati) {
+  function disegna(rec) {
+    var arg = rec.argomento, r = rec.risultato, dati = { video: rec.video, crediti: rec.crediti };
     if (!r.shorts) {
       out.innerHTML = '<div class="riquadro"><h2>Non trovato</h2><p>Non ho trovato Shorts di classifiche su "' + esc(arg) + '" negli ultimi 6 mesi. Prova con un\'altra parola (in inglese).</p></div>';
       return;
@@ -45,9 +46,10 @@
     h += '<div class="riquadro"><div class="voto-grande"><div class="cerchio ' + colore(r.voto) + '">' + r.voto + '</div><div>' +
       '<h2 style="margin:0">' + esc(arg) + ': ' + r.giudizio + '</h2>' +
       '<p><span class="etichetta ' + r.tipo + '">' + (r.tipo === 'sicura' ? 'Idea sicura' : r.tipo === 'prova' ? 'Idea da provare' : 'Da scartare') + '</span>' +
-      '<span class="muto piccolo">Ho guardato ' + r.shorts + ' Shorts di classifiche di ' + r.canali + ' canali · ' + n(dati.crediti) + ' crediti usati</span></p>' +
+      '<span class="muto piccolo">' + new Date(rec.quando).toLocaleString('it-IT', { dateStyle: 'short', timeStyle: 'short' }) + ' · Ho guardato ' + r.shorts + ' Shorts di classifiche di ' + r.canali + ' canali · ' + n(dati.crediti) + ' crediti usati</span></p>' +
       (r.aggiustamenti.length ? '<p class="muto piccolo">' + r.aggiustamenti.map(function (a) { return (a.punti > 0 ? '+' : '') + (a.punti || '') + ' ' + a.motivo; }).join(' · ') + '</p>' : '') +
       r.avvisi.map(function (a) { return '<p class="esito ko">' + esc(a) + '</p>'; }).join('') +
+      '<p><button class="bottone" type="button" id="an-excel">Scarica per Excel</button></p>' +
       '</div></div></div>';
 
     h += '<div class="tre">';
@@ -89,8 +91,32 @@
             String(m.xCanale).replace('.', ',') + ' rispetto al solito · ' + (m.durata || '?') + ' s</div></div></li>';
         }).join('') + '</ul></div>';
     }
+    h += Extra.grafici(r) + Extra.comeFarlo(arg, r);
     out.innerHTML = h;
+    var b = document.getElementById('an-excel');
+    if (b) b.addEventListener('click', function () { Extra.scaricaExcel(rec); });
   }
+
+  // ---------- ricerche salvate ----------
+  var box = $('an-salvate');
+  function aggiornaSalvate() {
+    var l = Extra.leggi();
+    if (!l.length) { box.innerHTML = '<p class="muto piccolo">Ancora nessuna ricerca salvata. Ogni analisi si salva da sola in questo browser.</p>'; return; }
+    box.innerHTML = '<ul class="salvate">' + l.map(function (x) {
+      var v = x.risultato.voto;
+      return '<li><span class="pallino ' + colore(v) + '">' + v + '</span><span class="nome-s"><b>' + esc(x.argomento) + '</b> <span class="muto piccolo">' +
+        new Date(x.quando).toLocaleString('it-IT', { dateStyle: 'short', timeStyle: 'short' }) + ' · ' + x.modo + '</span></span>' +
+        '<button class="bottone piccolo-b" data-apri="' + x.id + '">Apri</button><button class="bottone secondario piccolo-b" data-togli="' + x.id + '" aria-label="Togli">Togli</button></li>';
+    }).join('') + '</ul>';
+  }
+  box.addEventListener('click', function (e) {
+    var t = e.target, id;
+    if ((id = t.getAttribute('data-apri'))) {
+      var rec = Extra.leggi().filter(function (x) { return x.id === id; })[0];
+      if (rec) { disegna(rec); stato.className = 'esito'; stato.textContent = 'Ricerca salvata del ' + new Date(rec.quando).toLocaleString('it-IT') + ' (nessun credito usato).'; out.scrollIntoView({ behavior: 'smooth' }); }
+    } else if ((id = t.getAttribute('data-togli'))) { Extra.togli(id); aggiornaSalvate(); }
+  });
+  aggiornaSalvate();
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -103,11 +129,13 @@
     YT.raccogli(arg, modo.value, chiave, function (t) { stato.textContent = t; })
       .then(function (dati) {
         var lista = Motore.prepara(dati.video, dati.canali);
-        var r = Motore.analizza(lista);
+        var r = Motore.analizza(lista, { argomento: arg });
         stato.className = 'esito ok';
         stato.textContent = 'Fatto. Video trovati: ' + dati.trovati + ', tenuti come classifiche su "' + arg + '": ' + lista.length + '. Scartati: ' + dati.scartati.orizzontali + ' orizzontali (non Shorts), ' + dati.scartati.lunghi + ' troppo lunghi, ' + dati.scartati.nonClassifica + ' non classifiche, ' + dati.scartati.altroArgomento + ' su altro argomento.';
-        disegna(arg, r, dati);
-        window.RC.ultima = { argomento: arg, modo: modo.value, quando: new Date().toISOString(), risultato: r, video: lista, crediti: dati.crediti };
+        var rec = { argomento: arg, modo: modo.value, quando: new Date().toISOString(), risultato: r, video: lista, crediti: dati.crediti };
+        window.RC.ultima = rec;
+        disegna(Extra.salva(rec) || rec);
+        aggiornaSalvate();
       })
       .catch(function (err) { stato.className = 'esito ko'; stato.textContent = err.message || 'Qualcosa è andato storto.'; })
       .then(function () { vai.disabled = false; });
