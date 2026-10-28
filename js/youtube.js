@@ -9,6 +9,7 @@
     var motivo = j && j.error && j.error.errors && j.error.errors[0] && j.error.errors[0].reason;
     var testi = {
       quotaExceeded: 'Hai finito i crediti YouTube di oggi (10.000). Si ricaricano alle 9 di mattina circa.',
+      rateLimitExceeded: 'YouTube dice: troppe richieste insieme. Riprova tra un minuto.',
       keyInvalid: 'La chiave non è valida. Controllala in alto.',
       accessNotConfigured: 'Nella chiave non è attivo "YouTube Data API v3".',
       ipRefererBlocked: 'La chiave non permette di essere usata da questo sito.',
@@ -18,11 +19,23 @@
     e.motivo = motivo; return e;
   }
 
-  function chiama(percorso, parametri, chiave, contatore, costo) {
+  function aspetta(ms) { return new Promise(function (ok) { setTimeout(ok, ms); }); }
+  // Se YouTube dice "troppe richieste insieme", aspetta un po' e riprova (fino a 4 volte).
+  function chiama(percorso, parametri, chiave, contatore, costo, tentativo) {
+    tentativo = tentativo || 0;
     var q = Object.keys(parametri).map(function (k) { return k + '=' + encodeURIComponent(parametri[k]); }).join('&');
     return fetch(BASE + percorso + '?' + q + '&key=' + encodeURIComponent(chiave)).then(function (r) {
-      contatore.crediti += costo;
-      return r.json().then(function (j) { if (!r.ok) throw errore(j, r.status); return j; });
+      return r.json().then(function (j) {
+        if (!r.ok) {
+          var e = errore(j, r.status);
+          if ((e.motivo === 'rateLimitExceeded' || e.motivo === 'userRateLimitExceeded' || r.status >= 500) && tentativo < 4)
+            return aspetta([3000, 10000, 30000, 60000][tentativo]).then(function () { return chiama(percorso, parametri, chiave, contatore, costo, tentativo + 1); });
+          contatore.crediti += costo;
+          throw e;
+        }
+        contatore.crediti += costo;
+        return j;
+      });
     });
   }
 

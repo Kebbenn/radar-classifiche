@@ -35,13 +35,20 @@ const errori = [];
 const ora = Date.now();
 const giorniFa = g => new Date(ora - g * 86400000).toISOString();
 
-async function chiama(percorso, parametri, costo) {
+const pausa = ms => new Promise(ok => setTimeout(ok, PROVA ? 0 : ms));
+async function chiama(percorso, parametri, costo, tentativo = 0) {
   if (crediti + costo > TETTO) throw Object.assign(new Error('tetto crediti raggiunto'), { tetto: true });
   const q = new URLSearchParams({ ...parametri, key: CHIAVE || 'FINTA' });
   const r = await fetch('https://www.googleapis.com/youtube/v3/' + percorso + '?' + q);
-  crediti += costo;
   const j = await r.json();
-  if (!r.ok) { const m = j?.error?.errors?.[0]?.reason || r.status; throw Object.assign(new Error('YouTube: ' + m), { motivo: m }); }
+  if (!r.ok) {
+    const m = j?.error?.errors?.[0]?.reason || r.status;
+    if ((m === 'rateLimitExceeded' || m === 'userRateLimitExceeded' || r.status >= 500) && tentativo < 4) { await pausa([3000, 10000, 30000, 60000][tentativo]); return chiama(percorso, parametri, costo, tentativo + 1); }
+    crediti += costo;
+    throw Object.assign(new Error('YouTube: ' + m), { motivo: m });
+  }
+  crediti += costo;
+  await pausa(400);
   return j;
 }
 const aPezzi = (l, n) => Array.from({ length: Math.ceil(l.length / n) }, (_, i) => l.slice(i * n, i * n + n));
@@ -82,7 +89,10 @@ const GENERICHE = new Set(('the a an of in on at to for and or with from by is a
   'greatest biggest smallest strangest scariest coolest crazy cool insane epic famous people person world every which why how ' +
   'mejores peores momentos melhores piores momenti migliori peggiori meilleurs besten momente edition reaction reactions fails fail ' +
   'clips clip compilation season episode official full first last more than like just here there out up down over into let lets ' +
-  'one two three four five six seven eight nine ten got get see watch try tried wait end until make made way ways').split(' '));
+  'one two three four five six seven eight nine ten got get see watch try tried wait end until make made way ways ' +
+  'legendary ultimate dangerous sound sounds edit edits satisfying amazing unbelievable unexpected hardest easiest rarest impossible ' +
+  'strongest fastest smartest dumbest cutest wholesome scary scariest deadliest dramatic iconic unique real fake perfect extreme ' +
+  'satisfy oddly expensive cheapest weird strange hilarious savage brutal rare classic popular famous level levels pov meme').split(' '));
 const radice = w => (w.length > 4 && w.endsWith('es') ? w.slice(0, -2) : (w.length > 3 && w.endsWith('s') ? w.slice(0, -1) : w));
 
 function argomenti(video, gia) {
@@ -138,6 +148,7 @@ function riassunto(arg, rec, extra) {
 async function analizza(arg, modo = 'veloce') {
   const costo = YT.costoStimato(modo);
   if (crediti + costo > TETTO) throw Object.assign(new Error('tetto crediti raggiunto'), { tetto: true });
+  await pausa(2000); // una piccola pausa tra un argomento e l'altro
   const d = await YT.raccogli(arg, modo, CHIAVE || 'FINTA');
   crediti += d.crediti;
   const lista = Motore.prepara(d.video, d.canali, ora);
