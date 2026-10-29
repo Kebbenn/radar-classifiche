@@ -1,9 +1,14 @@
 name: Robot del mattino
 
 on:
-  schedule:
-    - cron: '17 5 * * *'   # 5:17 UTC = 6:17 in Italia d'inverno (7:17 d'estate)
+  schedule:                 # tre tentativi: se GitHub ne salta uno, parte al successivo
+    - cron: '17 5 * * *'    # 6:17 in Italia (d'inverno)
+    - cron: '47 5 * * *'    # 6:47
+    - cron: '17 6 * * *'    # 7:17
   workflow_dispatch:        # per farlo partire a mano dal pulsante "Run workflow"
+  push:                     # parte anche quando si cambia il robot o gli argomenti seguiti
+    branches: [main]
+    paths: ['.github/workflows/robot.yml', 'scripts/robot.mjs', 'data/seguiti.json']
 
 permissions:
   contents: write
@@ -18,16 +23,25 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+      - name: Il giro di oggi è già fatto?
+        id: controllo
+        run: |
+          OGGI=$(TZ=Europe/Rome date +%Y-%m-%d)
+          if [ "${{ github.event_name }}" = "schedule" ] && [ -f "data/robot/storico/$OGGI.json" ]; then
+            echo "Il giro di oggi ($OGGI) è già fatto: mi fermo."; echo "salta=si" >> "$GITHUB_OUTPUT"
+          else echo "salta=no" >> "$GITHUB_OUTPUT"; fi
       - uses: actions/setup-node@v4
+        if: steps.controllo.outputs.salta == 'no'
         with:
           node-version: '22'
       - name: Cerca e analizza
+        if: steps.controllo.outputs.salta == 'no'
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           TETTO_CREDITI: '9500'
         run: node scripts/robot.mjs
       - name: Salva i risultati
-        if: always()
+        if: always() && steps.controllo.outputs.salta == 'no'
         run: |
           git config user.name "robot-radar"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
