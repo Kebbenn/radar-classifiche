@@ -27,7 +27,7 @@ jobs:
         id: controllo
         run: |
           OGGI=$(TZ=Europe/Rome date +%Y-%m-%d)
-          if [ "${{ github.event_name }}" = "schedule" ] && [ -f "data/robot/storico/$OGGI.json" ]; then
+          if [ "${{ github.event_name }}" != "workflow_dispatch" ] && [ -f "data/robot/storico/$OGGI.json" ]; then
             echo "Il giro di oggi ($OGGI) è già fatto: mi fermo."; echo "salta=si" >> "$GITHUB_OUTPUT"
           else echo "salta=no" >> "$GITHUB_OUTPUT"; fi
       - uses: actions/setup-node@v4

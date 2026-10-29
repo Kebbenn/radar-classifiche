@@ -92,7 +92,8 @@ const GENERICHE = new Set(('the a an of in on at to for and or with from by is a
   'one two three four five six seven eight nine ten got get see watch try tried wait end until make made way ways ' +
   'legendary ultimate dangerous sound sounds edit edits satisfying amazing unbelievable unexpected hardest easiest rarest impossible ' +
   'strongest fastest smartest dumbest cutest wholesome scary scariest deadliest dramatic iconic unique real fake perfect extreme ' +
-  'satisfy oddly expensive cheapest weird strange hilarious savage brutal rare classic popular famous level levels pov meme').split(' '));
+  'satisfy oddly expensive cheapest weird strange hilarious savage brutal rare classic popular famous level levels pov meme ' +
+  'trend trends pro pros ballon edition version tiktok youtube instagram reels short shorts subscribe follow like comment').split(' '));
 const radice = w => (w.length > 4 && w.endsWith('es') ? w.slice(0, -2) : (w.length > 3 && w.endsWith('s') ? w.slice(0, -1) : w));
 
 function argomenti(video, gia) {
