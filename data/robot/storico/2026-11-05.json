@@ -1,0 +1,1952 @@
+{
+ "quando": "2026-11-05T13:09:27.983Z",
+ "giorno": "2026-11-05",
+ "versione": 1,
+ "scoperte": [
+  {
+   "argomento": "halloween",
+   "fonte": "scoperta",
+   "canaliNellaScoperta": 13,
+   "esempiScoperta": [
+    {
+     "id": "W0G4PlkKMgI",
+     "titolo": "RANKING DOS MOMENTOS MAIS ENGRAÇADOS DE HALLOWEEN",
+     "canale": "Balbi Lindo",
+     "views": 2850230
+    },
+    {
+     "id": "eBAnQLDdcpY",
+     "titolo": "Ranking Best Halloween Costume Transitions 🎃 #shorts #halloween #costumetransition #viral #trend",
+     "canale": "OctoRank",
+     "views": 996064
+    },
+    {
+     "id": "lZd5ZSa3ejY",
+     "titolo": "ranking best halloween costumes #usa",
+     "canale": "Ryth",
+     "views": 896516
+    }
+   ],
+   "votoVeloce": 82,
+   "voto": 85,
+   "giudizio": "Sì, vale la pena",
+   "tipo": "sicura",
+   "viralita": 82,
+   "opportunita": 75,
+   "replicabilita": 68,
+   "andamento": "cresce",
+   "sicurezza": "verde",
+   "motiviRischio": [],
+   "senzaLingua": "si",
+   "shorts": 182,
+   "canaliTrovati": 151,
+   "viewsTipicheNormale": 26778,
+   "durataMigliori": 44,
+   "piccoliSopra10k": {
+    "quanti": 36,
+    "su": 69
+   },
+   "paroleForti": [
+    "costumes",
+    "funniest",
+    "makeup",
+    "costume",
+    "pranks"
+   ],
+   "aggiustamenti": [
+    {
+     "motivo": "il tema sta crescendo",
+     "punti": 5
+    },
+    {
+     "motivo": "funziona in più lingue: si capisce senza parole",
+     "punti": 5
+    }
+   ],
+   "avvisi": [],
+   "modelli": [
+    {
+     "id": "uyJhvUS0E14",
+     "titolo": "Ranking the BEST Halloween Costumes! 🎃👻",
+     "canale": "Rankodon",
+     "iscritti": 1530,
+     "views": 1467097,
+     "vpd": 164415,
+     "xCanale": 100.2,
+     "durata": 46,
+     "link": "https://www.youtube.com/shorts/uyJhvUS0E14"
+    },
+    {
+     "id": "qhANPFmyvoI",
+     "titolo": "Ranking Best Halloween Moments",
+     "canale": "prodruss",
+     "iscritti": 22100,
+     "views": 15654767,
+     "vpd": 266122,
+     "xCanale": 55.2,
+     "durata": 23,
+     "link": "https://www.youtube.com/shorts/qhANPFmyvoI"
+    },
+    {
+     "id": "M-BMHvcjALQ",
+     "titolo": "Ranking Best Halloween Videos #ranking #halloween #shorts #funny",
+     "canale": "Rank University",
+     "iscritti": 5960,
+     "views": 6478689,
+     "vpd": 472722,
+     "xCanale": 42.6,
+     "durata": 29,
+     "link": "https://www.youtube.com/shorts/M-BMHvcjALQ"
+    },
+    {
+     "id": "PMC_EcxTvNk",
+     "titolo": "Ranking the Funniest Halloween Scare Pranks 🎃😂 #halloween #prank #scare",
+     "canale": "RankRoyale",
+     "iscritti": 43100,
+     "views": 22320430,
+     "vpd": 3690577,
+     "xCanale": 36.8,
+     "durata": 71,
+     "link": "https://www.youtube.com/shorts/PMC_EcxTvNk"
+    },
+    {
+     "id": "_iqP0o7ol94",
+     "titolo": "Ranking The Weirdest Michael Myers Encounters",
+     "canale": "Theo Declan",
+     "iscritti": 5810,
+     "views": 1178105,
+     "vpd": 52230,
+     "xCanale": 33.7,
+     "durata": 114,
+     "link": "https://www.youtube.com/shorts/_iqP0o7ol94"
+    }
+   ],
+   "creditiUsati": 610,
+   "ricerca": "profonda"
+  },
+  {
+   "argomento": "football",
+   "fonte": "scoperta",
+   "canaliNellaScoperta": 10,
+   "esempiScoperta": [
+    {
+     "id": "VsyjmdpBAOg",
+     "titolo": "Ranking Funniest Football Moments",
+     "canale": "ZynoxShorts",
+     "views": 1308501
+    },
+    {
+     "id": "uRn5EGMTc4E",
+     "titolo": "Ranking Craziest Football Celebrations 😭",
+     "canale": "ZedBall",
+     "views": 1126864
+    },
+    {
+     "id": "vBYmzEH0-fk",
+     "titolo": "Ranking Wholesome Football Moments 🤗",
+     "canale": "Zedsnap",
+     "views": 634882
+    }
+   ],
+   "votoVeloce": 72,
+   "voto": 70,
+   "giudizio": "Sì, vale la pena",
+   "tipo": "sicura",
+   "viralita": 51,
+   "opportunita": 78,
+   "replicabilita": 81,
+   "andamento": "stabile",
+   "sicurezza": "verde",
+   "motiviRischio": [
+    "risse e botte"
+   ],
+   "senzaLingua": "forse",
+   "shorts": 207,
+   "canaliTrovati": 131,
+   "viewsTipicheNormale": 45644,
+   "durataMigliori": 40,
+   "piccoliSopra10k": {
+    "quanti": 33,
+    "su": 52
+   },
+   "paroleForti": [
+    "funniest",
+    "edits",
+    "unexpected",
+    "american",
+    "fails"
+   ],
+   "aggiustamenti": [],
+   "avvisi": [],
+   "modelli": [
+    {
+     "id": "osWyrMOidAc",
+     "titolo": "Ranking the most viral kids football moments! #shorts",
+     "canale": "RillaRanks",
+     "iscritti": 9770,
+     "views": 16430986,
+     "vpd": 104942,
+     "xCanale": 75.4,
+     "durata": 23,
+     "link": "https://www.youtube.com/shorts/osWyrMOidAc"
+    },
+    {
+     "id": "C3muTTX1maI",
+     "titolo": "Ranking Best NFL Edits #football #nfl #rankings #edits",
+     "canale": "Sudz Vidz",
+     "iscritti": 2460,
+     "views": 1717041,
+     "vpd": 79220,
+     "xCanale": 52.8,
+     "durata": 42,
+     "link": "https://www.youtube.com/shorts/C3muTTX1maI"
+    },
+    {
+     "id": "n-fVzKWkHKg",
+     "titolo": "Ranking The Best Football Catches 😱 #football #footballshorts #crazy #foryou #shorts #viral #wow",
+     "canale": "BestRankingContent",
+     "iscritti": 1670,
+     "views": 4465518,
+     "vpd": 25565,
+     "xCanale": 42.3,
+     "durata": 22,
+     "link": "https://www.youtube.com/shorts/n-fVzKWkHKg"
+    },
+    {
+     "id": "ARq_ay8VlM8",
+     "titolo": "Ranking Unexpected Football Edits #shorts #football #ranking",
+     "canale": "SungEditx",
+     "iscritti": 8930,
+     "views": 3609064,
+     "vpd": 66870,
+     "xCanale": 39.3,
+     "durata": 41,
+     "link": "https://www.youtube.com/shorts/ARq_ay8VlM8"
+    },
+    {
+     "id": "ui4e9a57Sx4",
+     "titolo": "College Football rankings for Week #6! #ncaa #ncaafootball #collegefootball #ncaaf",
+     "canale": "Multi Pro Gaming",
+     "iscritti": 1490,
+     "views": 54090,
+     "vpd": 1708,
+     "xCanale": 39,
+     "durata": 7,
+     "link": "https://www.youtube.com/shorts/ui4e9a57Sx4"
+    }
+   ],
+   "creditiUsati": 609,
+   "ricerca": "profonda"
+  },
+  {
+   "argomento": "thrown",
+   "fonte": "scoperta",
+   "canaliNellaScoperta": 3,
+   "esempiScoperta": [
+    {
+     "id": "Bsnv7zIOlR8",
+     "titolo": "Ranking Things Thrown In Lava (Wait For The End) 🌋🔥 #shorts #ranking #usa #viral",
+     "canale": "Avelia Ranks",
+     "views": 3417169
+    },
+    {
+     "id": "U6v03zhko7c",
+     "titolo": "Ranking Best Thrown Into Volcano 😭😭 Part9",
+     "canale": "BellaRank",
+     "views": 1051129
+    },
+    {
+     "id": "1LDTu4pPjAA",
+     "titolo": "Ranking Best Things Thrown In Volcano 💀🌋 #usa",
+     "canale": "Rankonic",
+     "views": 1877765
+    }
+   ],
+   "voto": 62,
+   "giudizio": "Sì, vale la pena",
+   "tipo": "prova",
+   "viralita": 58,
+   "opportunita": 89,
+   "replicabilita": 43,
+   "andamento": "stabile",
+   "sicurezza": "verde",
+   "motiviRischio": [],
+   "senzaLingua": "nonControllato",
+   "shorts": 146,
+   "canaliTrovati": 100,
+   "viewsTipicheNormale": 28317,
+   "durataMigliori": 40,
+   "piccoliSopra10k": {
+    "quanti": 18,
+    "su": 31
+   },
+   "paroleForti": [
+    "volcano",
+    "craziest",
+    "into",
+    "lava",
+    "water"
+   ],
+   "aggiustamenti": [],
+   "avvisi": [],
+   "modelli": [
+    {
+     "id": "Bsnv7zIOlR8",
+     "titolo": "Ranking Things Thrown In Lava (Wait For The End) 🌋🔥 #shorts #ranking #usa #viral",
+     "canale": "Avelia Ranks",
+     "iscritti": 4610,
+     "views": 3417169,
+     "vpd": 3288998,
+     "xCanale": 128.1,
+     "durata": 61,
+     "link": "https://www.youtube.com/shorts/Bsnv7zIOlR8"
+    },
+    {
+     "id": "JP-DMmNh9uA",
+     "titolo": "Ranking Random Things Thrown In Lava (Part 2)",
+     "canale": "Cranks",
+     "iscritti": 32800,
+     "views": 9716828,
+     "vpd": 222916,
+     "xCanale": 70.3,
+     "durata": 38,
+     "link": "https://www.youtube.com/shorts/JP-DMmNh9uA"
+    },
+    {
+     "id": "ztrnS5Z2hlg",
+     "titolo": "Ranking Best Thrown in Lava",
+     "canale": "Mr. Unknown Ranks",
+     "iscritti": 3000,
+     "views": 4802012,
+     "vpd": 124509,
+     "xCanale": 56.4,
+     "durata": 28,
+     "link": "https://www.youtube.com/shorts/ztrnS5Z2hlg"
+    },
+    {
+     "id": "QK-oEVUGSDg",
+     "titolo": "RANKING BEST THROWING IN LAVA #funny #bestcomedyskit #comedyskits #viral",
+     "canale": "ANCH1",
+     "iscritti": 6960,
+     "views": 5310124,
+     "vpd": 115206,
+     "xCanale": 55.2,
+     "durata": 83,
+     "link": "https://www.youtube.com/shorts/QK-oEVUGSDg"
+    },
+    {
+     "id": "gu7yjyu7z8I",
+     "titolo": "Ranking best volcano throwing moments #shorts",
+     "canale": "Raw Comment",
+     "iscritti": 64900,
+     "views": 31551057,
+     "vpd": 959408,
+     "xCanale": 55.1,
+     "durata": 50,
+     "link": "https://www.youtube.com/shorts/gu7yjyu7z8I"
+    }
+   ],
+   "creditiUsati": 305,
+   "ricerca": "veloce"
+  },
+  {
+   "argomento": "volcano",
+   "fonte": "scoperta",
+   "canaliNellaScoperta": 4,
+   "esempiScoperta": [
+    {
+     "id": "U6v03zhko7c",
+     "titolo": "Ranking Best Thrown Into Volcano 😭😭 Part9",
+     "canale": "BellaRank",
+     "views": 1051129
+    },
+    {
+     "id": "1LDTu4pPjAA",
+     "titolo": "Ranking Best Things Thrown In Volcano 💀🌋 #usa",
+     "canale": "Rankonic",
+     "views": 1877765
+    },
+    {
+     "id": "aOznDuQVedM",
+     "titolo": "Ranking The Best Volcano Moments 😱 #ranking #volcano #shorts",
+     "canale": "Ultimate Rankings",
+     "views": 30429
+    }
+   ],
+   "voto": 56,
+   "giudizio": "Da provare",
+   "tipo": "prova",
+   "viralita": 51,
+   "opportunita": 88,
+   "replicabilita": 54,
+   "andamento": "cala",
+   "sicurezza": "verde",
+   "motiviRischio": [],
+   "senzaLingua": "nonControllato",
+   "shorts": 146,
+   "canaliTrovati": 106,
+   "viewsTipicheNormale": 27543,
+   "durataMigliori": 41,
+   "piccoliSopra10k": {
+    "quanti": 19,
+    "su": 33
+   },
+   "paroleForti": [
+    "thrown",
+    "throwing",
+    "craziest",
+    "into",
+    "stuff"
+   ],
+   "aggiustamenti": [
+    {
+     "motivo": "il tema sta calando",
+     "punti": -7
+    }
+   ],
+   "avvisi": [],
+   "modelli": [
+    {
+     "id": "Bsnv7zIOlR8",
+     "titolo": "Ranking Things Thrown In Lava (Wait For The End) 🌋🔥 #shorts #ranking #usa #viral",
+     "canale": "Avelia Ranks",
+     "iscritti": 4620,
+     "views": 3417507,
+     "vpd": 3289323,
+     "xCanale": 128.2,
+     "durata": 61,
+     "link": "https://www.youtube.com/shorts/Bsnv7zIOlR8"
+    },
+    {
+     "id": "hlgGipxNTfQ",
+     "titolo": "Ranking the Craziest Volcano Moments #usa",
+     "canale": "Rank Map",
+     "iscritti": 7700,
+     "views": 8572663,
+     "vpd": 161475,
+     "xCanale": 111.9,
+     "durata": 36,
+     "link": "https://www.youtube.com/shorts/hlgGipxNTfQ"
+    },
+    {
+     "id": "5x4YOcCtYj0",
+     "titolo": "Ranking the best Volcano therowing moments #ranking #valcon #moment #shorts",
+     "canale": "oops Reacted",
+     "iscritti": 16400,
+     "views": 10259201,
+     "vpd": 222894,
+     "xCanale": 66.8,
+     "durata": 65,
+     "link": "https://www.youtube.com/shorts/5x4YOcCtYj0"
+    },
+    {
+     "id": "OZsgc0v7B8A",
+     "titolo": "Ranking Dropping Things In Volcano #ranking",
+     "canale": "Rank funny",
+     "iscritti": 47600,
+     "views": 11500662,
+     "vpd": 255770,
+     "xCanale": 58.4,
+     "durata": 45,
+     "link": "https://www.youtube.com/shorts/OZsgc0v7B8A"
+    },
+    {
+     "id": "gu7yjyu7z8I",
+     "titolo": "Ranking best volcano throwing moments #shorts",
+     "canale": "Raw Comment",
+     "iscritti": 64900,
+     "views": 31551057,
+     "vpd": 959408,
+     "xCanale": 55.1,
+     "durata": 50,
+     "link": "https://www.youtube.com/shorts/gu7yjyu7z8I"
+    }
+   ],
+   "creditiUsati": 306,
+   "ricerca": "veloce"
+  },
+  {
+   "argomento": "chicken",
+   "fonte": "scoperta",
+   "canaliNellaScoperta": 6,
+   "esempiScoperta": [
+    {
+     "id": "Np3Tki4YrXE",
+     "titolo": "Ranking The Funniest Chicken Scream Moments pt38😂😭",
+     "canale": "cliportey",
+     "views": 1373449
+    },
+    {
+     "id": "adGBVAoZbb8",
+     "titolo": "Ranking The Funniest Chicken Scream",
+     "canale": "RankSenna",
+     "views": 1429601
+    },
+    {
+     "id": "unrVaOqkOAk",
+     "titolo": "Ranking The Funniest Chicken Screaming Moments",
+     "canale": "Listify Elite ",
+     "views": 605481
+    }
+   ],
+   "voto": 54,
+   "giudizio": "Da provare",
+   "tipo": "prova",
+   "viralita": 51,
+   "opportunita": 83,
+   "replicabilita": 39,
+   "andamento": "cala",
+   "sicurezza": "verde",
+   "motiviRischio": [],
+   "senzaLingua": "si",
+   "shorts": 127,
+   "canaliTrovati": 92,
+   "viewsTipicheNormale": 25356,
+   "durataMigliori": 23,
+   "piccoliSopra10k": {
+    "quanti": 27,
+    "su": 39
+   },
+   "paroleForti": [
+    "funniest",
+    "scream",
+    "screaming",
+    "screams"
+   ],
+   "aggiustamenti": [
+    {
+     "motivo": "il tema sta calando",
+     "punti": -7
+    },
+    {
+     "motivo": "funziona in più lingue: si capisce senza parole",
+     "punti": 5
+    }
+   ],
+   "avvisi": [],
+   "modelli": [
+    {
+     "id": "H9f4woHCOg0",
+     "titolo": "Ranking funniest chicken screaming moments 🐔😁🤣",
+     "canale": "Panjaxx",
+     "iscritti": 18100,
+     "views": 9290780,
+     "vpd": 159026,
+     "xCanale": 67.4,
+     "durata": 26,
+     "link": "https://www.youtube.com/shorts/H9f4woHCOg0"
+    },
+    {
+     "id": "flaV_VmTW4Q",
+     "titolo": "Ranking Funniest Chicken Screams 😭😭",
+     "canale": "TONY RANKS",
+     "iscritti": 27900,
+     "views": 5751967,
+     "vpd": 115410,
+     "xCanale": 65.3,
+     "durata": 22,
+     "link": "https://www.youtube.com/shorts/flaV_VmTW4Q"
+    },
+    {
+     "id": "B26HPZC_l8E",
+     "titolo": "Ranking Funniest Chicken Screams 😂🐔(Part-124)",
+     "canale": "RankyDuck",
+     "iscritti": 64700,
+     "views": 14877112,
+     "vpd": 296968,
+     "xCanale": 49.1,
+     "durata": 18,
+     "link": "https://www.youtube.com/shorts/B26HPZC_l8E"
+    },
+    {
+     "id": "RvN-M3_1pfc",
+     "titolo": "Ranking Chicken Screaming Moments. #usa",
+     "canale": "TierGods",
+     "iscritti": 11800,
+     "views": 7610025,
+     "vpd": 224194,
+     "xCanale": 39.2,
+     "durata": 20,
+     "link": "https://www.youtube.com/shorts/RvN-M3_1pfc"
+    },
+    {
+     "id": "gttVmYNyYIk",
+     "titolo": "Ranking top 5 chicken scram moment",
+     "canale": "sharma",
+     "iscritti": 9860,
+     "views": 9853002,
+     "vpd": 263476,
+     "xCanale": 30.5,
+     "durata": 18,
+     "link": "https://www.youtube.com/shorts/gttVmYNyYIk"
+    }
+   ],
+   "creditiUsati": 305,
+   "ricerca": "veloce"
+  },
+  {
+   "argomento": "parrot",
+   "fonte": "scoperta",
+   "canaliNellaScoperta": 2,
+   "esempiScoperta": [
+    {
+     "id": "E-uZ2PHEJjo",
+     "titolo": "Ranking Funniest Parrot Moments",
+     "canale": "Sunsolotl",
+     "views": 3382006
+    },
+    {
+     "id": "szbZtLm5jdg",
+     "titolo": "Ranking The Funniest Parrots Moments(Part 02)🤣 | Pro Ranks",
+     "canale": "Pro Ranks",
+     "views": 91861
+    }
+   ],
+   "voto": 54,
+   "giudizio": "Da provare",
+   "tipo": "prova",
+   "viralita": 89,
+   "opportunita": 42,
+   "replicabilita": 15,
+   "andamento": "cresce",
+   "sicurezza": "verde",
+   "motiviRischio": [],
+   "senzaLingua": "forse",
+   "shorts": 131,
+   "canaliTrovati": 113,
+   "viewsTipicheNormale": 3756,
+   "durataMigliori": 26,
+   "piccoliSopra10k": {
+    "quanti": 11,
+    "su": 40
+   },
+   "paroleForti": [
+    "funniest",
+    "amazing",
+    "talking",
+    "core"
+   ],
+   "aggiustamenti": [
+    {
+     "motivo": "il tema sta crescendo",
+     "punti": 5
+    }
+   ],
+   "avvisi": [],
+   "modelli": [
+    {
+     "id": "LMFAZouumLY",
+     "titolo": "Post 03: Amazing Encounter! A Man Finds a Green Parrot in an Old Tree #ranking #shorts #viralvideo",
+     "canale": "Lifestyle168",
+     "iscritti": 5270,
+     "views": 1408080,
+     "vpd": 81599,
+     "xCanale": 140.6,
+     "durata": 20,
+     "link": "https://www.youtube.com/shorts/LMFAZouumLY"
+    },
+    {
+     "id": "ctETbX2eCWE",
+     "titolo": "Amazing Video 03: A large hand ready to catch a parrot. #parrotlet #birds #shorts #ranking #nature",
+     "canale": "TV SSK168",
+     "iscritti": 1730,
+     "views": 336942,
+     "vpd": 17422,
+     "xCanale": 76.8,
+     "durata": 24,
+     "link": "https://www.youtube.com/shorts/ctETbX2eCWE"
+    },
+    {
+     "id": "8PDVO0MH3_I",
+     "titolo": "Survival Skills 02: Let's go take a look at a parrot's nest with me. #wildlife #ranking #shorts",
+     "canale": "Lifestyle168",
+     "iscritti": 5270,
+     "views": 662226,
+     "vpd": 66736,
+     "xCanale": 66.1,
+     "durata": 15,
+     "link": "https://www.youtube.com/shorts/8PDVO0MH3_I"
+    },
+    {
+     "id": "g3vqKzTe-y4",
+     "titolo": "Ranking Best Parrot Talking Moments🤣🤣",
+     "canale": "PawDaily 🐾",
+     "iscritti": 41800,
+     "views": 7802063,
+     "vpd": 360754,
+     "xCanale": 43.3,
+     "durata": 30,
+     "link": "https://www.youtube.com/shorts/g3vqKzTe-y4"
+    },
+    {
+     "id": "bEmpDkpSsFs",
+     "titolo": "Ranking Best Parrot Moments🤣",
+     "canale": "PawDaily 🐾",
+     "iscritti": 41800,
+     "views": 6467476,
+     "vpd": 253544,
+     "xCanale": 35.9,
+     "durata": 23,
+     "link": "https://www.youtube.com/shorts/bEmpDkpSsFs"
+    }
+   ],
+   "creditiUsati": 306,
+   "ricerca": "veloce"
+  },
+  {
+   "argomento": "better",
+   "fonte": "scoperta",
+   "canaliNellaScoperta": 3,
+   "esempiScoperta": [
+    {
+     "id": "3jBOkjYb-Cs",
+     "titolo": "Ranking The BEST Treat You Better #tiktok #trend #usa #shorts",
+     "canale": "TrendCountdowns",
+     "views": 4024044
+    },
+    {
+     "id": "uOI2xZJsHQc",
+     "titolo": "IS YAO GUANG BETTER THAN AHA?!🎭 (Elation Support Tier List)HSR META 4.7",
+     "canale": "Payne",
+     "views": 58894
+    },
+    {
+     "id": "uTT-eSCO0ws",
+     "titolo": "Top 5 Treat You Better Videos #ranking #shorts #tierlist #usa #top5",
+     "canale": "I Love My Pet 🥹",
+     "views": 38761
+    }
+   ],
+   "voto": 47,
+   "giudizio": "Da provare",
+   "tipo": "prova",
+   "viralita": 34,
+   "opportunita": 50,
+   "replicabilita": 44,
+   "andamento": "nuovo",
+   "sicurezza": "verde",
+   "motiviRischio": [],
+   "senzaLingua": "nonControllato",
+   "shorts": 23,
+   "canaliTrovati": 19,
+   "viewsTipicheNormale": 27466,
+   "durataMigliori": 34,
+   "piccoliSopra10k": {
+    "quanti": 6,
+    "su": 8
+   },
+   "paroleForti": [],
+   "aggiustamenti": [
+    {
+     "motivo": "il tema sta crescendo",
+     "punti": 5
+    }
+   ],
+   "avvisi": [],
+   "modelli": [
+    {
+     "id": "iQRka8ujJ7o",
+     "titolo": "Ranking songs by Jailer vs jailer 2 #jailer2 #rajnikanth #anirudh #trending #shorts",
+     "canale": "Md Fahim",
+     "iscritti": 10600,
+     "views": 10167834,
+     "vpd": 318549,
+     "xCanale": 30.5,
+     "durata": 60,
+     "link": "https://www.youtube.com/shorts/iQRka8ujJ7o"
+    },
+    {
+     "id": "yFOswYQsdyc",
+     "titolo": "Ranking BEST TREAT YOU BETTER Trend pt2 #tiktok #trend #usa #shorts",
+     "canale": "TrendCountdowns",
+     "iscritti": 62700,
+     "views": 5436505,
+     "vpd": 499627,
+     "xCanale": 29.2,
+     "durata": 33,
+     "link": "https://www.youtube.com/shorts/yFOswYQsdyc"
+    },
+    {
+     "id": "_j8GV0X9eUM",
+     "titolo": "Ranking BEST TREAT YOU BETTER TREND #tiktok #trend #usa #shorts",
+     "canale": "TrendCountdowns",
+     "iscritti": 62700,
+     "views": 4613497,
+     "vpd": 388295,
+     "xCanale": 24.8,
+     "durata": 34,
+     "link": "https://www.youtube.com/shorts/_j8GV0X9eUM"
+    },
+    {
+     "id": "3jBOkjYb-Cs",
+     "titolo": "Ranking The BEST Treat You Better #tiktok #trend #usa #shorts",
+     "canale": "TrendCountdowns",
+     "iscritti": 62700,
+     "views": 4024044,
+     "vpd": 4024044,
+     "xCanale": 21.7,
+     "durata": 29,
+     "link": "https://www.youtube.com/shorts/3jBOkjYb-Cs"
+    },
+    {
+     "id": "2kMAxcFMg-w",
+     "titolo": "Ranking BEST TREAT YOU BETTER Trend pt3 #tiktok #trend #usa #shorts",
+     "canale": "TrendCountdowns",
+     "iscritti": 62700,
+     "views": 2058855,
+     "vpd": 299189,
+     "xCanale": 11.1,
+     "durata": 32,
+     "link": "https://www.youtube.com/shorts/2kMAxcFMg-w"
+    }
+   ],
+   "creditiUsati": 304,
+   "ricerca": "veloce"
+  },
+  {
+   "argomento": "memes",
+   "fonte": "scoperta",
+   "canaliNellaScoperta": 8,
+   "esempiScoperta": [
+    {
+     "id": "cajsoZf_fqE",
+     "titolo": "Ranking Best Recreation Memes 😁 #usa",
+     "canale": "Rankonic",
+     "views": 561725
+    },
+    {
+     "id": "kSpA4v4j8Yg",
+     "titolo": "RANKING FUNNY MEMES !!!  #memes #memeranking #funny #funnycomedy #fypシ#ranked #ranking #tierlist",
+     "canale": "SunnyRanks",
+     "views": 475645
+    },
+    {
+     "id": "AgSvHMKusV8",
+     "titolo": "TRENDING MEMES ON INTERNET #memes #funny #funnycomedy #fypシ #memeranking #ranked #ranking #tierlist",
+     "canale": "SunnyRanks",
+     "views": 605616
+    }
+   ],
+   "votoVeloce": 64,
+   "voto": 45,
+   "giudizio": "Da provare",
+   "tipo": "prova",
+   "viralita": 42,
+   "opportunita": 74,
+   "replicabilita": 29,
+   "andamento": "cala",
+   "sicurezza": "verde",
+   "motiviRischio": [],
+   "senzaLingua": "si",
+   "shorts": 132,
+   "canaliTrovati": 115,
+   "viewsTipicheNormale": 33527,
+   "durataMigliori": 36,
+   "piccoliSopra10k": {
+    "quanti": 29,
+    "su": 54
+   },
+   "paroleForti": [
+    "funniest",
+    "iconic",
+    "chicken",
+    "recreation",
+    "scream"
+   ],
+   "aggiustamenti": [
+    {
+     "motivo": "il tema sta calando",
+     "punti": -7
+    },
+    {
+     "motivo": "funziona in più lingue: si capisce senza parole",
+     "punti": 5
+    }
+   ],
+   "avvisi": [],
+   "modelli": [
+    {
+     "id": "Ko9kO961GDY",
+     "titolo": "Ranking World's Funniest Memes 😂 | wait for twist #funny #shorts #viral",
+     "canale": "ULTRA GAMERZ",
+     "iscritti": 4380,
+     "views": 1323581,
+     "vpd": 207001,
+     "xCanale": 116,
+     "durata": 57,
+     "link": "https://www.youtube.com/shorts/Ko9kO961GDY"
+    },
+    {
+     "id": "kKDdgRIQhEk",
+     "titolo": "Ranking The Best Unboxing Squishy Dumplings moments 🥟✨ #shorts #trending #ranking #trend #fyp",
+     "canale": "AceTrends",
+     "iscritti": 43300,
+     "views": 34799756,
+     "vpd": 198707,
+     "xCanale": 82.3,
+     "durata": 24,
+     "link": "https://www.youtube.com/shorts/kKDdgRIQhEk"
+    },
+    {
+     "id": "6nMuG0s3mwk",
+     "titolo": "Ranking the funniest Counter Strike moments🔫💀(Part 9)",
+     "canale": "IanRankings",
+     "iscritti": 149000,
+     "views": 48272010,
+     "vpd": 300047,
+     "xCanale": 64.6,
+     "durata": 59,
+     "link": "https://www.youtube.com/shorts/6nMuG0s3mwk"
+    },
+    {
+     "id": "CmdSrOzWPjs",
+     "titolo": "Ranking What Sound Does a Dinosaur Make",
+     "canale": "Epic Rankings",
+     "iscritti": 14000,
+     "views": 21658493,
+     "vpd": 135413,
+     "xCanale": 37.3,
+     "durata": 39,
+     "link": "https://www.youtube.com/shorts/CmdSrOzWPjs"
+    },
+    {
+     "id": "HCtXIFro9AA",
+     "titolo": "Ranking Khaby Lame’s Most HILARIOUS Moments 😂🤌",
+     "canale": "That Made the List",
+     "iscritti": 29200,
+     "views": 18070767,
+     "vpd": 516829,
+     "xCanale": 35.9,
+     "durata": 163,
+     "link": "https://www.youtube.com/shorts/HCtXIFro9AA"
+    }
+   ],
+   "creditiUsati": 609,
+   "ricerca": "profonda"
+  },
+  {
+   "argomento": "baby",
+   "fonte": "scoperta",
+   "canaliNellaScoperta": 13,
+   "esempiScoperta": [
+    {
+     "id": "5fzzHiTrT5Y",
+     "titolo": "Ranking Best Funniest Baby Moments",
+     "canale": "Nuggy",
+     "views": 2533867
+    },
+    {
+     "id": "JnvCaSoXgt8",
+     "titolo": "Ranking The Smartest Baby Moments 🧠😂 #shorts #funny",
+     "canale": "RankTastik",
+     "views": 1774287
+    },
+    {
+     "id": "_HDgYv8JghI",
+     "titolo": "Ranking Cutest Baby Responses Ever (Snow Edition)",
+     "canale": "Rankify",
+     "views": 1266871
+    }
+   ],
+   "voto": 39,
+   "giudizio": "Meglio di no",
+   "tipo": "no",
+   "viralita": 44,
+   "opportunita": 83,
+   "replicabilita": 59,
+   "andamento": "morendo",
+   "sicurezza": "verde",
+   "motiviRischio": [],
+   "senzaLingua": "forse",
+   "shorts": 120,
+   "canaliTrovati": 85,
+   "viewsTipicheNormale": 29717,
+   "durataMigliori": 26,
+   "piccoliSopra10k": {
+    "quanti": 26,
+    "su": 30
+   },
+   "paroleForti": [
+    "funniest",
+    "cutest",
+    "reactions",
+    "responses",
+    "edition"
+   ],
+   "aggiustamenti": [
+    {
+     "motivo": "il tema sta morendo",
+     "punti": -15
+    }
+   ],
+   "avvisi": [],
+   "modelli": [
+    {
+     "id": "wnuZBKaTNe0",
+     "titolo": "Ranking Best Smart Baby Moments",
+     "canale": "the squik rank ",
+     "iscritti": 106000,
+     "views": 36234140,
+     "vpd": 882728,
+     "xCanale": 79.3,
+     "durata": 35,
+     "link": "https://www.youtube.com/shorts/wnuZBKaTNe0"
+    },
+    {
+     "id": "bkT3UMht68M",
+     "titolo": "Ranking The Funniest Baby Birthday Fails🙂‍↔️🎂 #shorts",
+     "canale": "Rank Craze",
+     "iscritti": 27600,
+     "views": 22962327,
+     "vpd": 533673,
+     "xCanale": 66.7,
+     "durata": 26,
+     "link": "https://www.youtube.com/shorts/bkT3UMht68M"
+    },
+    {
+     "id": "_ZSJgk9Q7wI",
+     "titolo": "Ranking Funniest Baby Filter Moments #usa",
+     "canale": "Peza",
+     "iscritti": 18000,
+     "views": 7146119,
+     "vpd": 145635,
+     "xCanale": 59.9,
+     "durata": 31,
+     "link": "https://www.youtube.com/shorts/_ZSJgk9Q7wI"
+    },
+    {
+     "id": "hxhGLW0-O6E",
+     "titolo": "Top 5 funniest baby moments (Twins Edition).🤣 #ranking #shorts #cute #funnybabyvideos #fyp #fypシ",
+     "canale": "Snøw Ranking☃️",
+     "iscritti": 5000,
+     "views": 5549212,
+     "vpd": 311574,
+     "xCanale": 53.9,
+     "durata": 36,
+     "link": "https://www.youtube.com/shorts/hxhGLW0-O6E"
+    },
+    {
+     "id": "nDyi_TNGy-0",
+     "titolo": "Ranking Funniest Baby Moments",
+     "canale": "ViralKuray",
+     "iscritti": 6840,
+     "views": 5716401,
+     "vpd": 130737,
+     "xCanale": 47.1,
+     "durata": 22,
+     "link": "https://www.youtube.com/shorts/nDyi_TNGy-0"
+    }
+   ],
+   "creditiUsati": 305,
+   "ricerca": "veloce"
+  },
+  {
+   "argomento": "dog",
+   "fonte": "scoperta",
+   "canaliNellaScoperta": 19,
+   "esempiScoperta": [
+    {
+     "id": "JR-sI5AqSKI",
+     "titolo": "Ranking Best Dog Call Without Call Core 🐶",
+     "canale": "Rank Dawg",
+     "views": 1974773
+    },
+    {
+     "id": "aNYVxEeaLDc",
+     "titolo": "Ranking Best Dancing Dog Moments",
+     "canale": "MeowRank",
+     "views": 1895955
+    },
+    {
+     "id": "dwP2NyniL3s",
+     "titolo": "Ranking The Best Dogs Moments🤣🤣",
+     "canale": "Reece Ranks",
+     "views": 394226
+    }
+   ],
+   "voto": 39,
+   "giudizio": "Meglio di no",
+   "tipo": "no",
+   "viralita": 44,
+   "opportunita": 91,
+   "replicabilita": 58,
+   "andamento": "morendo",
+   "sicurezza": "verde",
+   "motiviRischio": [],
+   "senzaLingua": "nonControllato",
+   "shorts": 134,
+   "canaliTrovati": 110,
+   "viewsTipicheNormale": 24694,
+   "durataMigliori": 31,
+   "piccoliSopra10k": {
+    "quanti": 31,
+    "su": 37
+   },
+   "paroleForti": [
+    "funniest",
+    "tail",
+    "eating",
+    "core",
+    "relatable"
+   ],
+   "aggiustamenti": [
+    {
+     "motivo": "il tema sta morendo",
+     "punti": -15
+    }
+   ],
+   "avvisi": [],
+   "modelli": [
+    {
+     "id": "VAHn7zlG0w8",
+     "titolo": "Top 5 Funniest Dog moments 🐕😭",
+     "canale": "John Ranking",
+     "iscritti": 40200,
+     "views": 23030455,
+     "vpd": 2086074,
+     "xCanale": 89.4,
+     "durata": 36,
+     "link": "https://www.youtube.com/shorts/VAHn7zlG0w8"
+    },
+    {
+     "id": "P-eQ5fv00Oo",
+     "titolo": "funniest Dog moments Ranking🥰",
+     "canale": "Leo_YT2603",
+     "iscritti": 16700,
+     "views": 6936729,
+     "vpd": 990405,
+     "xCanale": 84.6,
+     "durata": 48,
+     "link": "https://www.youtube.com/shorts/P-eQ5fv00Oo"
+    },
+    {
+     "id": "hKj2aD8aB0c",
+     "titolo": "Ranking The Best Dancing Dogs Everr 🐕✨ #dancingdog #funny #shorts",
+     "canale": "FunTier",
+     "iscritti": 48200,
+     "views": 17732772,
+     "vpd": 299922,
+     "xCanale": 65.6,
+     "durata": 21,
+     "link": "https://www.youtube.com/shorts/hKj2aD8aB0c"
+    },
+    {
+     "id": "UGfcT9yFGtY",
+     "titolo": "Ranking CATS & DOGS WITH +999 AURA Core 😎🐾",
+     "canale": "LoafLog",
+     "iscritti": 64700,
+     "views": 7618908,
+     "vpd": 161652,
+     "xCanale": 62.9,
+     "durata": 25,
+     "link": "https://www.youtube.com/shorts/UGfcT9yFGtY"
+    },
+    {
+     "id": "dhZYM1QC_m4",
+     "titolo": "RANKING RELATABLE AI DOG MOMENTS🐶",
+     "canale": "CrispReels",
+     "iscritti": 86000,
+     "views": 12979498,
+     "vpd": 551380,
+     "xCanale": 62,
+     "durata": 51,
+     "link": "https://www.youtube.com/shorts/dhZYM1QC_m4"
+    }
+   ],
+   "creditiUsati": 306,
+   "ricerca": "veloce"
+  },
+  {
+   "argomento": "cat",
+   "fonte": "scoperta",
+   "canaliNellaScoperta": 15,
+   "esempiScoperta": [
+    {
+     "id": "vCbtOl-HJ50",
+     "titolo": "Ranking BEST CAT WITH ANIMALS Core Moments!! 🐱🌳",
+     "canale": "AniRank",
+     "views": 834357
+    },
+    {
+     "id": "8ChsjyKKy-Q",
+     "titolo": "Ranking Best Cat Ragebait Core🤬 #prank #cat #catprankvideo #shorts",
+     "canale": "PurrPrank",
+     "views": 1239365
+    },
+    {
+     "id": "CwzakvZ04LE",
+     "titolo": "Ranking The Funniest Clap Cat Moments",
+     "canale": "Listify Elite ",
+     "views": 747684
+    }
+   ],
+   "voto": 38,
+   "giudizio": "Meglio di no",
+   "tipo": "no",
+   "viralita": 41,
+   "opportunita": 84,
+   "replicabilita": 38,
+   "andamento": "morendo",
+   "sicurezza": "verde",
+   "motiviRischio": [
+    "risse e botte"
+   ],
+   "senzaLingua": "nonControllato",
+   "shorts": 117,
+   "canaliTrovati": 89,
+   "viewsTipicheNormale": 24119,
+   "durataMigliori": 33,
+   "piccoliSopra10k": {
+    "quanti": 35,
+    "su": 40
+   },
+   "paroleForti": [
+    "funniest",
+    "glowing",
+    "cutest",
+    "core",
+    "attack"
+   ],
+   "aggiustamenti": [
+    {
+     "motivo": "il tema sta morendo",
+     "punti": -15
+    }
+   ],
+   "avvisi": [],
+   "modelli": [
+    {
+     "id": "8VsOldKjWwc",
+     "titolo": "Cual es para ti el mejor? #cats #gatos #animals  #viral #ranking",
+     "canale": "Buji Canella",
+     "iscritti": 14700,
+     "views": 6725133,
+     "vpd": 672101,
+     "xCanale": 126.9,
+     "durata": 60,
+     "link": "https://www.youtube.com/shorts/8VsOldKjWwc"
+    },
+    {
+     "id": "9pJULJ8TGCA",
+     "titolo": "Ranking Funniest Streamer & Cat Core Moments!!🐱🎮",
+     "canale": "FunnySweyrox",
+     "iscritti": 25300,
+     "views": 15401011,
+     "vpd": 503092,
+     "xCanale": 97.9,
+     "durata": 38,
+     "link": "https://www.youtube.com/shorts/9pJULJ8TGCA"
+    },
+    {
+     "id": "E7s45vCtKyQ",
+     "titolo": "Ranking Cutest cat Moments 🐈😺 #usa",
+     "canale": "DemonRanks",
+     "iscritti": 72500,
+     "views": 20147983,
+     "vpd": 354212,
+     "xCanale": 92,
+     "durata": 53,
+     "link": "https://www.youtube.com/shorts/E7s45vCtKyQ"
+    },
+    {
+     "id": "UGfcT9yFGtY",
+     "titolo": "Ranking CATS & DOGS WITH +999 AURA Core 😎🐾",
+     "canale": "LoafLog",
+     "iscritti": 64700,
+     "views": 7618908,
+     "vpd": 161652,
+     "xCanale": 62.9,
+     "durata": 25,
+     "link": "https://www.youtube.com/shorts/UGfcT9yFGtY"
+    },
+    {
+     "id": "HAY0492wSrE",
+     "titolo": "Ranking Best Cat Glowing Moments",
+     "canale": "Bounce Nation",
+     "iscritti": 12800,
+     "views": 10681172,
+     "vpd": 283588,
+     "xCanale": 57.4,
+     "durata": 36,
+     "link": "https://www.youtube.com/shorts/HAY0492wSrE"
+    }
+   ],
+   "creditiUsati": 305,
+   "ricerca": "veloce"
+  },
+  {
+   "argomento": "cam",
+   "fonte": "scoperta",
+   "canaliNellaScoperta": 3,
+   "esempiScoperta": [
+    {
+     "id": "fuUliJ5O26M",
+     "titolo": "Ranking The Trend Cam2r Reactions 🔥",
+     "canale": "rxphaelrxnks",
+     "views": 1191394
+    },
+    {
+     "id": "3hTBREfP93w",
+     "titolo": "Ranking the best cam2r reaction",
+     "canale": "RankKiss",
+     "views": 309994
+    },
+    {
+     "id": "6rfo-AvytQE",
+     "titolo": "Ranking Cam2r FUNNIEST MOMENTS!!! 🗣️🔥 PT. 18",
+     "canale": "Koala Ranks",
+     "views": 51771
+    }
+   ],
+   "voto": 36,
+   "giudizio": "Meglio di no",
+   "tipo": "no",
+   "viralita": 49,
+   "opportunita": 35,
+   "replicabilita": 44,
+   "andamento": "cala",
+   "sicurezza": "verde",
+   "motiviRischio": [],
+   "senzaLingua": "nonControllato",
+   "shorts": 104,
+   "canaliTrovati": 70,
+   "viewsTipicheNormale": 2400,
+   "durataMigliori": 36,
+   "piccoliSopra10k": {
+    "quanti": 7,
+    "su": 38
+   },
+   "paroleForti": [
+    "funniest",
+    "caught",
+    "reactions"
+   ],
+   "aggiustamenti": [
+    {
+     "motivo": "il tema sta calando",
+     "punti": -7
+    }
+   ],
+   "avvisi": [],
+   "modelli": [
+    {
+     "id": "hlnNRxqUeEY",
+     "titolo": "Ranking Best Glowups Ever Caught On Camera(#1 Is Unbelievable) 😱✨",
+     "canale": "TierMaster",
+     "iscritti": 1130,
+     "views": 1037813,
+     "vpd": 19261,
+     "xCanale": 41,
+     "durata": 59,
+     "link": "https://www.youtube.com/shorts/hlnNRxqUeEY"
+    },
+    {
+     "id": "lINm7ROln80",
+     "titolo": "Very crazy MTB fails on cam #foryou #funny #ranking #crazy #mtb #fails #crash #viral #shorts",
+     "canale": "FailOranks",
+     "iscritti": 653,
+     "views": 564038,
+     "vpd": 46931,
+     "xCanale": 32.1,
+     "durata": 20,
+     "link": "https://www.youtube.com/shorts/lINm7ROln80"
+    },
+    {
+     "id": "OnHICBhf2V0",
+     "titolo": "Top Player vs Camera Moment in Football",
+     "canale": "football info",
+     "iscritti": 3040,
+     "views": 1272152,
+     "vpd": 257580,
+     "xCanale": 20.2,
+     "durata": 34,
+     "link": "https://www.youtube.com/shorts/OnHICBhf2V0"
+    },
+    {
+     "id": "JfzMd3XnIqo",
+     "titolo": "Ranking scary videos #ranking #scaryvideos",
+     "canale": "Scary Footage",
+     "iscritti": 3670,
+     "views": 993626,
+     "vpd": 24175,
+     "xCanale": 15.6,
+     "durata": 33,
+     "link": "https://www.youtube.com/shorts/JfzMd3XnIqo"
+    },
+    {
+     "id": "pMWfMzpcV0A",
+     "titolo": "ranking some crazy dash cam footage.🫥",
+     "canale": "Wholeclipzzz",
+     "iscritti": 797,
+     "views": 174341,
+     "vpd": 3320,
+     "xCanale": 13.4,
+     "durata": 45,
+     "link": "https://www.youtube.com/shorts/pMWfMzpcV0A"
+    }
+   ],
+   "creditiUsati": 305,
+   "ricerca": "veloce"
+  },
+  {
+   "argomento": "players",
+   "fonte": "scoperta",
+   "canaliNellaScoperta": 9,
+   "esempiScoperta": [
+    {
+     "id": "8RaaeozSJcw",
+     "titolo": "Real Madrid VS Barcelona | Players’ Ballon d’Or Rankings  #football #shorts",
+     "canale": "yamal10",
+     "views": 1690873
+    },
+    {
+     "id": "FE6q2_NNiA8",
+     "titolo": "Ranking the best players in the world right now p3🌍 #football #soccer #fyp",
+     "canale": "OtaKux ",
+     "views": 736597
+    },
+    {
+     "id": "Tlh0uuieWO8",
+     "titolo": "Guess The Top 10 Highest Rated Players In The Last 10 Years Premier League",
+     "canale": "Conner Cole",
+     "views": 686921
+    }
+   ],
+   "voto": 35,
+   "giudizio": "Meglio di no",
+   "tipo": "no",
+   "viralita": 45,
+   "opportunita": 38,
+   "replicabilita": 21,
+   "andamento": "stabile",
+   "sicurezza": "verde",
+   "motiviRischio": [],
+   "senzaLingua": "nonControllato",
+   "shorts": 48,
+   "canaliTrovati": 43,
+   "viewsTipicheNormale": 5371,
+   "durataMigliori": 43,
+   "piccoliSopra10k": {
+    "quanti": 10,
+    "su": 26
+   },
+   "paroleForti": [
+    "funniest",
+    "roblox",
+    "football"
+   ],
+   "aggiustamenti": [],
+   "avvisi": [],
+   "modelli": [
+    {
+     "id": "c0lrPTJeLyw",
+     "titolo": "Ranking Funniest Mimic Party Moments",
+     "canale": "Epic Gaming Clips ",
+     "iscritti": 13900,
+     "views": 8636187,
+     "vpd": 514121,
+     "xCanale": 47.6,
+     "durata": 76,
+     "link": "https://www.youtube.com/shorts/c0lrPTJeLyw"
+    },
+    {
+     "id": "zh6pzaq9s34",
+     "titolo": "Ranking The Best Football Touches Ever ⚡️ #football #soccer #skills",
+     "canale": "FailsSquad",
+     "iscritti": 6070,
+     "views": 4857061,
+     "vpd": 108948,
+     "xCanale": 37,
+     "durata": 35,
+     "link": "https://www.youtube.com/shorts/zh6pzaq9s34"
+    },
+    {
+     "id": "PAtareUr-uc",
+     "titolo": "Ranking football ankle breakers",
+     "canale": "DinoRank",
+     "iscritti": 441,
+     "views": 2031151,
+     "vpd": 56482,
+     "xCanale": 35.1,
+     "durata": 43,
+     "link": "https://www.youtube.com/shorts/PAtareUr-uc"
+    },
+    {
+     "id": "JRP--Bciyg0",
+     "titolo": "Ranking the best players in the world right now 🌍 #football #soccer #fyp",
+     "canale": "OtaKux ",
+     "iscritti": 118000,
+     "views": 3548771,
+     "vpd": 315055,
+     "xCanale": 31.6,
+     "durata": 64,
+     "link": "https://www.youtube.com/shorts/JRP--Bciyg0"
+    },
+    {
+     "id": "DJjRzvdXUf4",
+     "titolo": "Ranking Funniest Valorant Moments 😂😂#valorant #valorantfunny #fps #viral #usa #shorts",
+     "canale": "777 BOT GAMING",
+     "iscritti": 810,
+     "views": 2002387,
+     "vpd": 143584,
+     "xCanale": 26.8,
+     "durata": 63,
+     "link": "https://www.youtube.com/shorts/DJjRzvdXUf4"
+    }
+   ],
+   "creditiUsati": 304,
+   "ricerca": "veloce"
+  },
+  {
+   "argomento": "cover",
+   "fonte": "scoperta",
+   "canaliNellaScoperta": 2,
+   "esempiScoperta": [
+    {
+     "id": "oRa-eaChcFA",
+     "titolo": "ORDINARY COVER RANKING – WHICH VERSION DESERVES THE #1 SPOT? 🎤#coversong #ordinary #cover #ranked",
+     "canale": "DEXFLOW ",
+     "views": 1075902
+    },
+    {
+     "id": "AnPVKE9Y818",
+     "titolo": "Ranking the Funniest Fart Cover-Up Fails 💨😂",
+     "canale": "Alec Epic",
+     "views": 1428837
+    },
+    {
+     "id": "wvytow0AaS4",
+     "titolo": "Ranking the Most Hilarious Fart Cover-Up Fails 💨🤣",
+     "canale": "Alec Epic",
+     "views": 563394
+    }
+   ],
+   "voto": 29,
+   "giudizio": "Meglio di no",
+   "tipo": "no",
+   "viralita": 28,
+   "opportunita": 43,
+   "replicabilita": 61,
+   "andamento": "morendo",
+   "sicurezza": "verde",
+   "motiviRischio": [],
+   "senzaLingua": "nonControllato",
+   "shorts": 102,
+   "canaliTrovati": 59,
+   "viewsTipicheNormale": 7251,
+   "durataMigliori": 57,
+   "piccoliSopra10k": {
+    "quanti": 10,
+    "su": 28
+   },
+   "paroleForti": [
+    "funniest",
+    "singing",
+    "fails",
+    "voice",
+    "ordinary"
+   ],
+   "aggiustamenti": [
+    {
+     "motivo": "il tema sta morendo",
+     "punti": -15
+    }
+   ],
+   "avvisi": [],
+   "modelli": [
+    {
+     "id": "oRa-eaChcFA",
+     "titolo": "ORDINARY COVER RANKING – WHICH VERSION DESERVES THE #1 SPOT? 🎤#coversong #ordinary #cover #ranked",
+     "canale": "DEXFLOW ",
+     "iscritti": 1770,
+     "views": 1075902,
+     "vpd": 1075902,
+     "xCanale": 83.7,
+     "durata": 30,
+     "link": "https://www.youtube.com/shorts/oRa-eaChcFA"
+    },
+    {
+     "id": "IOsoRqWml4U",
+     "titolo": "Ranking The Best moment Singing : #cover #music #singing",
+     "canale": "Music is my passion",
+     "iscritti": 48900,
+     "views": 6910801,
+     "vpd": 193726,
+     "xCanale": 38.2,
+     "durata": 34,
+     "link": "https://www.youtube.com/shorts/IOsoRqWml4U"
+    },
+    {
+     "id": "9QSn5kSs0Ws",
+     "titolo": "I ranked the best singing moments #cover #singing #song",
+     "canale": "AntBill ranks",
+     "iscritti": 6740,
+     "views": 2667700,
+     "vpd": 47345,
+     "xCanale": 37.6,
+     "durata": 98,
+     "link": "https://www.youtube.com/shorts/9QSn5kSs0Ws"
+    },
+    {
+     "id": "uAnhXRq2w-8",
+     "titolo": "Ranking the best singing I m Sorry Mom #cover #singing #imsorrymom #youtubeshorts #singer",
+     "canale": "RANKING EMPIRE TV",
+     "iscritti": 2250,
+     "views": 610159,
+     "vpd": 26050,
+     "xCanale": 31.6,
+     "durata": 63,
+     "link": "https://www.youtube.com/shorts/uAnhXRq2w-8"
+    },
+    {
+     "id": "xusLUcF6j9A",
+     "titolo": "The Best 'Beautiful Things' Covers Ranked  || Benson Boone 🎤",
+     "canale": "Ralph's Music World ",
+     "iscritti": 70700,
+     "views": 3056006,
+     "vpd": 88856,
+     "xCanale": 25.1,
+     "durata": 92,
+     "link": "https://www.youtube.com/shorts/xusLUcF6j9A"
+    }
+   ],
+   "creditiUsati": 305,
+   "ricerca": "veloce"
+  },
+  {
+   "argomento": "core",
+   "fonte": "scoperta",
+   "canaliNellaScoperta": 9,
+   "esempiScoperta": [
+    {
+     "id": "JR-sI5AqSKI",
+     "titolo": "Ranking Best Dog Call Without Call Core 🐶",
+     "canale": "Rank Dawg",
+     "views": 1974773
+    },
+    {
+     "id": "vCbtOl-HJ50",
+     "titolo": "Ranking BEST CAT WITH ANIMALS Core Moments!! 🐱🌳",
+     "canale": "AniRank",
+     "views": 834357
+    },
+    {
+     "id": "8ChsjyKKy-Q",
+     "titolo": "Ranking Best Cat Ragebait Core🤬 #prank #cat #catprankvideo #shorts",
+     "canale": "PurrPrank",
+     "views": 1239365
+    }
+   ],
+   "voto": 24,
+   "giudizio": "Meglio di no",
+   "tipo": "no",
+   "viralita": 29,
+   "opportunita": 41,
+   "replicabilita": 46,
+   "andamento": "morendo",
+   "sicurezza": "verde",
+   "motiviRischio": [
+    "risse e botte"
+   ],
+   "senzaLingua": "nonControllato",
+   "shorts": 144,
+   "canaliTrovati": 73,
+   "viewsTipicheNormale": 16597,
+   "durataMigliori": 30,
+   "piccoliSopra10k": {
+    "quanti": 20,
+    "su": 35
+   },
+   "paroleForti": [
+    "dogs",
+    "cats",
+    "eating",
+    "streamer",
+    "attack"
+   ],
+   "aggiustamenti": [
+    {
+     "motivo": "il tema sta morendo",
+     "punti": -15
+    }
+   ],
+   "avvisi": [],
+   "modelli": [
+    {
+     "id": "9pJULJ8TGCA",
+     "titolo": "Ranking Funniest Streamer & Cat Core Moments!!🐱🎮",
+     "canale": "FunnySweyrox",
+     "iscritti": 25300,
+     "views": 15401011,
+     "vpd": 503092,
+     "xCanale": 97.9,
+     "durata": 38,
+     "link": "https://www.youtube.com/shorts/9pJULJ8TGCA"
+    },
+    {
+     "id": "uPk4DVpK45o",
+     "titolo": "Ranking Scared Cat Core Moments: Try Not To Laugh!! 😹🙌 #shorts #cat #funnycats #ranking",
+     "canale": "RankSkyUS",
+     "iscritti": 7900,
+     "views": 5368458,
+     "vpd": 267920,
+     "xCanale": 93.3,
+     "durata": 17,
+     "link": "https://www.youtube.com/shorts/uPk4DVpK45o"
+    },
+    {
+     "id": "UGfcT9yFGtY",
+     "titolo": "Ranking CATS & DOGS WITH +999 AURA Core 😎🐾",
+     "canale": "LoafLog",
+     "iscritti": 64700,
+     "views": 7618908,
+     "vpd": 161652,
+     "xCanale": 62.9,
+     "durata": 25,
+     "link": "https://www.youtube.com/shorts/UGfcT9yFGtY"
+    },
+    {
+     "id": "dlCuNAd6QKk",
+     "titolo": "Ranking FUNNIEST CLINGY CAT Core Moment!! 😺❤️",
+     "canale": "Benranking ",
+     "iscritti": 10800,
+     "views": 3730407,
+     "vpd": 63400,
+     "xCanale": 62.9,
+     "durata": 26,
+     "link": "https://www.youtube.com/shorts/dlCuNAd6QKk"
+    },
+    {
+     "id": "f3baco0JGF4",
+     "titolo": "Ranking Nick Smithyman Mentality Core😂 #funny #ranking #algorithm #shorts #viral #shortsfeed #fyp",
+     "canale": "RankedLevels",
+     "iscritti": 3910,
+     "views": 6821590,
+     "vpd": 126575,
+     "xCanale": 45.8,
+     "durata": 74,
+     "link": "https://www.youtube.com/shorts/f3baco0JGF4"
+    }
+   ],
+   "creditiUsati": 305,
+   "ricerca": "veloce"
+  },
+  {
+   "argomento": "dos",
+   "fonte": "scoperta",
+   "canaliNellaScoperta": 2,
+   "esempiScoperta": [
+    {
+     "id": "W0G4PlkKMgI",
+     "titolo": "RANKING DOS MOMENTOS MAIS ENGRAÇADOS DE HALLOWEEN",
+     "canale": "Balbi Lindo",
+     "views": 2850230
+    },
+    {
+     "id": "e7C0l-QH1T0",
+     "titolo": "RANKING DOS MOMENTOS MAIS SATISFATÓRIOS DE OBJETOS SE ENCAIXANDO PERFEITAMENTE",
+     "canale": "Balbi Lindo",
+     "views": 1343233
+    },
+    {
+     "id": "ZtH9WSIuMqI",
+     "titolo": "RANKING DOS CONFORTOS DA COZINHA DA CASA TEC",
+     "canale": "Olhada Tec",
+     "views": 513749
+    }
+   ],
+   "voto": 4,
+   "giudizio": "Meglio di no",
+   "tipo": "no",
+   "viralita": 15,
+   "opportunita": 13,
+   "replicabilita": 29,
+   "andamento": "morendo",
+   "sicurezza": "verde",
+   "motiviRischio": [],
+   "senzaLingua": "nonControllato",
+   "shorts": 116,
+   "canaliTrovati": 32,
+   "viewsTipicheNormale": 8121,
+   "durataMigliori": 52,
+   "piccoliSopra10k": {
+    "quanti": 4,
+    "su": 16
+   },
+   "paroleForti": [
+    "mais",
+    "insanos",
+    "engraçados",
+    "tesouros",
+    "praia"
+   ],
+   "aggiustamenti": [
+    {
+     "motivo": "il tema sta morendo",
+     "punti": -15
+    }
+   ],
+   "avvisi": [],
+   "modelli": [
+    {
+     "id": "sSP50wYkK9U",
+     "titolo": "RANKING DOS MOMENTOS MAIS ENGRAÇADOS NO TRAMPOLIM",
+     "canale": "Kevinhu ",
+     "iscritti": 175000,
+     "views": 5927927,
+     "vpd": 102916,
+     "xCanale": 73.1,
+     "durata": 49,
+     "link": "https://www.youtube.com/shorts/sSP50wYkK9U"
+    },
+    {
+     "id": "9J2_Og9o68A",
+     "titolo": "Ranking dos Momentos Engraçados com Gato 🐈 #ranking",
+     "canale": "Caveirinha",
+     "iscritti": 39600,
+     "views": 3993738,
+     "vpd": 108165,
+     "xCanale": 22,
+     "durata": 29,
+     "link": "https://www.youtube.com/shorts/9J2_Og9o68A"
+    },
+    {
+     "id": "utSp6LQ0x00",
+     "titolo": "🌊 RANKING DOS SALTOS MAIS ENGRAÇADOS! #shorts #fail",
+     "canale": "Lapiz11",
+     "iscritti": 3470,
+     "views": 4235441,
+     "vpd": 80474,
+     "xCanale": 15,
+     "durata": 18,
+     "link": "https://www.youtube.com/shorts/utSp6LQ0x00"
+    },
+    {
+     "id": "3frMoeIUuiI",
+     "titolo": "💧 RANKING DOS SALTOS MAIS ENGRAÇADOS NA ÁGUA #shorts #fail",
+     "canale": "Lapiz11",
+     "iscritti": 3470,
+     "views": 3792353,
+     "vpd": 63597,
+     "xCanale": 13.4,
+     "durata": 25,
+     "link": "https://www.youtube.com/shorts/3frMoeIUuiI"
+    },
+    {
+     "id": "wJPe4q0XNJ8",
+     "titolo": "RANKING dos melhores MOMENTOS dos GOLEIROS! 😱",
+     "canale": "Torque",
+     "iscritti": 228000,
+     "views": 4264849,
+     "vpd": 95900,
+     "xCanale": 12.2,
+     "durata": 39,
+     "link": "https://www.youtube.com/shorts/wJPe4q0XNJ8"
+    }
+   ],
+   "creditiUsati": 304,
+   "ricerca": "veloce"
+  }
+ ],
+ "seguiti": [
+  {
+   "argomento": "lava",
+   "fonte": "seguito",
+   "voto": 49,
+   "giudizio": "Da provare",
+   "tipo": "prova",
+   "viralita": 44,
+   "opportunita": 76,
+   "replicabilita": 50,
+   "andamento": "cala",
+   "sicurezza": "verde",
+   "motiviRischio": [],
+   "senzaLingua": "forse",
+   "shorts": 130,
+   "canaliTrovati": 95,
+   "viewsTipicheNormale": 20917,
+   "durataMigliori": 42,
+   "piccoliSopra10k": {
+    "quanti": 16,
+    "su": 31
+   },
+   "paroleForti": [
+    "thrown",
+    "craziest",
+    "volcano",
+    "mais",
+    "insanos"
+   ],
+   "aggiustamenti": [
+    {
+     "motivo": "il tema sta calando",
+     "punti": -7
+    }
+   ],
+   "avvisi": [],
+   "modelli": [
+    {
+     "id": "Bsnv7zIOlR8",
+     "titolo": "Ranking Things Thrown In Lava (Wait For The End) 🌋🔥 #shorts #ranking #usa #viral",
+     "canale": "Avelia Ranks",
+     "iscritti": 4610,
+     "views": 3417169,
+     "vpd": 3288998,
+     "xCanale": 128.1,
+     "durata": 61,
+     "link": "https://www.youtube.com/shorts/Bsnv7zIOlR8"
+    },
+    {
+     "id": "JP-DMmNh9uA",
+     "titolo": "Ranking Random Things Thrown In Lava (Part 2)",
+     "canale": "Cranks",
+     "iscritti": 32800,
+     "views": 9716828,
+     "vpd": 222916,
+     "xCanale": 70.3,
+     "durata": 38,
+     "link": "https://www.youtube.com/shorts/JP-DMmNh9uA"
+    },
+    {
+     "id": "9j3qw7kS9Og",
+     "titolo": "RANKING RANDOM THINGS IN LAVA.🫨#ranking #usa #viral",
+     "canale": "Crazy LOL7",
+     "iscritti": 1180,
+     "views": 2630816,
+     "vpd": 59081,
+     "xCanale": 58.1,
+     "durata": 28,
+     "link": "https://www.youtube.com/shorts/9j3qw7kS9Og"
+    },
+    {
+     "id": "rgHpRCH-zx8",
+     "titolo": "Ranking Random Things in Lava 😎 Part 99 #ranking #rankingfunnymoments",
+     "canale": "Rank Avenue",
+     "iscritti": 3170,
+     "views": 2276714,
+     "vpd": 50810,
+     "xCanale": 56.8,
+     "durata": 51,
+     "link": "https://www.youtube.com/shorts/rgHpRCH-zx8"
+    },
+    {
+     "id": "ztrnS5Z2hlg",
+     "titolo": "Ranking Best Thrown in Lava",
+     "canale": "Mr. Unknown Ranks",
+     "iscritti": 3000,
+     "views": 4802012,
+     "vpd": 124509,
+     "xCanale": 56.4,
+     "durata": 28,
+     "link": "https://www.youtube.com/shorts/ztrnS5Z2hlg"
+    }
+   ],
+   "creditiUsati": 305,
+   "ricerca": "veloce"
+  }
+ ],
+ "videoScoperti": 500,
+ "crediti": 8325,
+ "tetto": 9500,
+ "errori": []
+}
